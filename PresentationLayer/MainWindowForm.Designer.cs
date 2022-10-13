@@ -88,6 +88,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // panel1
             // 
@@ -117,6 +118,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.reportButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // productsButton
             // 
@@ -138,6 +140,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.productsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.productsButton.UseVisualStyleBackColor = true;
+            this.productsButton.Click += new System.EventHandler(this.productsButton_Click);
             // 
             // customersSubmenuPanel
             // 
@@ -171,6 +174,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listCustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.listCustomersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.listCustomersButton.UseVisualStyleBackColor = true;
+            this.listCustomersButton.Click += new System.EventHandler(this.listCustomersButton_Click);
             // 
             // addCustomerButton
             // 
@@ -193,6 +197,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.addCustomerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addCustomerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addCustomerButton.UseVisualStyleBackColor = true;
+            this.addCustomerButton.Click += new System.EventHandler(this.addCustomerButton_Click);
             // 
             // customersButton
             // 
@@ -214,6 +219,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.customersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.customersButton.UseVisualStyleBackColor = true;
+            this.customersButton.Click += new System.EventHandler(this.customersButton_Click);
             // 
             // ordersSubmenuPanel
             // 
@@ -247,6 +253,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listOrdersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.listOrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.listOrdersButton.UseVisualStyleBackColor = true;
+            this.listOrdersButton.Click += new System.EventHandler(this.listOrdersButton_Click);
             // 
             // newOrderButton
             // 
@@ -269,6 +276,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.newOrderButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.newOrderButton.UseVisualStyleBackColor = true;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // ordersButton
             // 
@@ -290,6 +298,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.ordersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ordersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ordersButton.UseVisualStyleBackColor = true;
+            this.ordersButton.Click += new System.EventHandler(this.ordersButton_Click);
             // 
             // dashboardButton
             // 
@@ -311,6 +320,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.dashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboardButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dashboardButton.UseVisualStyleBackColor = true;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // logoPanel
             // 
