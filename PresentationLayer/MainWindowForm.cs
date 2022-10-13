@@ -15,6 +15,24 @@ namespace PoppelOrderingSystem.PresentationLayer
         public MainWindowForm()
         {
             InitializeComponent();
+
+            HideAllSubmenu();
         }
+
+        #region Hide/Show Submenu
+        private void HideAllSubmenu()
+        {
+            ordersSubmenuPanel.Visible = false;
+            customersSubmenuPanel.Visible = false;
+        }
+
+        private void ShowSubmenu(Panel submenuPanel)
+        {
+            if (submenuPanel.Visible == true)
+                HideAllSubmenu();
+            else
+                submenuPanel.Visible = true;
+        }
+        #endregion
     }
 }
