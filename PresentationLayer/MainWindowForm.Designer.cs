@@ -44,10 +44,10 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.ordersButton = new FontAwesome.Sharp.IconButton();
             this.dashboardButton = new FontAwesome.Sharp.IconButton();
             this.logoPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.childFormPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.headerTitle = new System.Windows.Forms.Label();
             this.sidemenuPanel.SuspendLayout();
             this.customersSubmenuPanel.SuspendLayout();
             this.ordersSubmenuPanel.SuspendLayout();
@@ -79,7 +79,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoutButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoutButton.FlatAppearance.BorderSize = 0;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOut;
             this.logoutButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -110,7 +110,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.reportButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.reportButton.FlatAppearance.BorderSize = 0;
             this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.reportButton.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.reportButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -133,7 +133,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.productsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.productsButton.FlatAppearance.BorderSize = 0;
             this.productsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.productsButton.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.productsButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -167,7 +167,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listCustomersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.listCustomersButton.FlatAppearance.BorderSize = 0;
             this.listCustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.listCustomersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listCustomersButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listCustomersButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.listCustomersButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.listCustomersButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -190,7 +190,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.addCustomerButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addCustomerButton.FlatAppearance.BorderSize = 0;
             this.addCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCustomerButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCustomerButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.addCustomerButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.addCustomerButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -213,7 +213,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.customersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.customersButton.FlatAppearance.BorderSize = 0;
             this.customersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.customersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.customersButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -247,7 +247,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listOrdersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.listOrdersButton.FlatAppearance.BorderSize = 0;
             this.listOrdersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.listOrdersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listOrdersButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listOrdersButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.listOrdersButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.listOrdersButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -270,7 +270,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.newOrderButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.newOrderButton.FlatAppearance.BorderSize = 0;
             this.newOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newOrderButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.newOrderButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.newOrderButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -293,7 +293,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.ordersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ordersButton.FlatAppearance.BorderSize = 0;
             this.ordersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ordersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordersButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordersButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.ordersButton.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.ordersButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -316,7 +316,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.dashboardButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.dashboardButton.FlatAppearance.BorderSize = 0;
             this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.dashboardButton.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
             this.dashboardButton.IconColor = System.Drawing.Color.Gainsboro;
@@ -342,19 +342,6 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoPanel.Size = new System.Drawing.Size(220, 100);
             this.logoPanel.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.label1.Size = new System.Drawing.Size(195, 62);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dashboard";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
@@ -376,12 +363,26 @@ namespace PoppelOrderingSystem.PresentationLayer
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(120)))), ((int)(((byte)(87)))));
-            this.headerPanel.Controls.Add(this.label1);
+            this.headerPanel.Controls.Add(this.headerTitle);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(220, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(844, 60);
             this.headerPanel.TabIndex = 1;
+            // 
+            // headerTitle
+            // 
+            this.headerTitle.AutoSize = true;
+            this.headerTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.headerTitle.Location = new System.Drawing.Point(0, 0);
+            this.headerTitle.Name = "headerTitle";
+            this.headerTitle.Padding = new System.Windows.Forms.Padding(15, 10, 0, 0);
+            this.headerTitle.Size = new System.Drawing.Size(199, 55);
+            this.headerTitle.TabIndex = 0;
+            this.headerTitle.Text = "Dashboard";
+            this.headerTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainWindowForm
             // 
@@ -421,8 +422,8 @@ namespace PoppelOrderingSystem.PresentationLayer
         private FontAwesome.Sharp.IconButton logoutButton;
         private System.Windows.Forms.Panel spacingPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel childFormPanel;
         private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Label headerTitle;
     }
 }
