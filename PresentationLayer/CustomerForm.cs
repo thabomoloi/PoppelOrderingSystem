@@ -25,7 +25,6 @@ namespace PoppelOrderingSystem.PresentationLayer
             customerTabPages.Appearance = TabAppearance.FlatButtons;
             customerTabPages.ItemSize = new Size(0, 1);
             customerTabPages.SizeMode = TabSizeMode.Fixed;
-
         }
         #endregion
     }
