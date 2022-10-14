@@ -28,9 +28,6 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         #endregion
 
-        #region  Active Button Change Baackground Colors
-
-        #endregion
         #region Hide/Show Submenu
         private void HideAllSubmenu()
         {
@@ -50,15 +47,36 @@ namespace PoppelOrderingSystem.PresentationLayer
         }
         #endregion
 
+        #region  Active Button - Change Background Colors
+        private void ActivateButton(object sender)
+        {
+            if (sender != null)
+            {
+                DeactivateButton();
+                activeButton = (IconButton)sender;
+                activeButton.BackColor = ColorsRGB.CYAN_900;
+            }
+        }
+        private void DeactivateButton()
+        {
+            if (activeButton != null)
+            {
+                activeButton.BackColor = ColorsRGB.EMERALD_900;
+            }
+        }
+        #endregion
+
         #region Sidemenu buttons click events
         private void dashboardButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
+            ActivateButton(sender);
         }
 
         private void ordersButton_Click(object sender, EventArgs e)
         {
             ShowSubmenu(ordersSubmenuPanel);
+            ActivateButton(sender);
         }
 
         #region Order Submenu
@@ -76,6 +94,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         private void customersButton_Click(object sender, EventArgs e)
         {
             ShowSubmenu(customersSubmenuPanel);
+            ActivateButton(sender);
         }
 
         #region Customers Submenu
@@ -93,16 +112,19 @@ namespace PoppelOrderingSystem.PresentationLayer
         private void productsButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
+            ActivateButton(sender);
         }
 
         private void reportButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
+            ActivateButton(sender);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
+            ActivateButton(sender);
         }
         #endregion
     }
