@@ -31,7 +31,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             this.sidemenuPanel = new System.Windows.Forms.Panel();
             this.logoutButton = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.spacingPanel = new System.Windows.Forms.Panel();
             this.reportButton = new FontAwesome.Sharp.IconButton();
             this.productsButton = new FontAwesome.Sharp.IconButton();
             this.customersSubmenuPanel = new System.Windows.Forms.Panel();
@@ -44,16 +44,22 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.ordersButton = new FontAwesome.Sharp.IconButton();
             this.dashboardButton = new FontAwesome.Sharp.IconButton();
             this.logoPanel = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.childFromPanel = new System.Windows.Forms.Panel();
             this.sidemenuPanel.SuspendLayout();
             this.customersSubmenuPanel.SuspendLayout();
             this.ordersSubmenuPanel.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidemenuPanel
             // 
+            this.sidemenuPanel.AutoScroll = true;
             this.sidemenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(78)))), ((int)(((byte)(59)))));
             this.sidemenuPanel.Controls.Add(this.logoutButton);
-            this.sidemenuPanel.Controls.Add(this.panel1);
+            this.sidemenuPanel.Controls.Add(this.spacingPanel);
             this.sidemenuPanel.Controls.Add(this.reportButton);
             this.sidemenuPanel.Controls.Add(this.productsButton);
             this.sidemenuPanel.Controls.Add(this.customersSubmenuPanel);
@@ -65,7 +71,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.sidemenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenuPanel.Location = new System.Drawing.Point(0, 0);
             this.sidemenuPanel.Name = "sidemenuPanel";
-            this.sidemenuPanel.Size = new System.Drawing.Size(250, 707);
+            this.sidemenuPanel.Size = new System.Drawing.Size(250, 676);
             this.sidemenuPanel.TabIndex = 0;
             // 
             // logoutButton
@@ -78,8 +84,9 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOut;
             this.logoutButton.IconColor = System.Drawing.Color.Gainsboro;
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.logoutButton.IconSize = 32;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 630);
+            this.logoutButton.Location = new System.Drawing.Point(0, 590);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.logoutButton.Size = new System.Drawing.Size(250, 50);
@@ -90,13 +97,13 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // panel1
+            // spacingPanel
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 530);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 100);
-            this.panel1.TabIndex = 9;
+            this.spacingPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.spacingPanel.Location = new System.Drawing.Point(0, 530);
+            this.spacingPanel.Name = "spacingPanel";
+            this.spacingPanel.Size = new System.Drawing.Size(250, 60);
+            this.spacingPanel.TabIndex = 9;
             // 
             // reportButton
             // 
@@ -108,6 +115,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.reportButton.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.reportButton.IconColor = System.Drawing.Color.Gainsboro;
             this.reportButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.reportButton.IconSize = 32;
             this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportButton.Location = new System.Drawing.Point(0, 480);
             this.reportButton.Name = "reportButton";
@@ -130,6 +138,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.productsButton.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.productsButton.IconColor = System.Drawing.Color.Gainsboro;
             this.productsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.productsButton.IconSize = 32;
             this.productsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productsButton.Location = new System.Drawing.Point(0, 430);
             this.productsButton.Name = "productsButton";
@@ -163,7 +172,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listCustomersButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.listCustomersButton.IconColor = System.Drawing.Color.Gainsboro;
             this.listCustomersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.listCustomersButton.IconSize = 12;
+            this.listCustomersButton.IconSize = 24;
             this.listCustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.listCustomersButton.Location = new System.Drawing.Point(0, 45);
             this.listCustomersButton.Name = "listCustomersButton";
@@ -186,7 +195,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.addCustomerButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.addCustomerButton.IconColor = System.Drawing.Color.Gainsboro;
             this.addCustomerButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.addCustomerButton.IconSize = 12;
+            this.addCustomerButton.IconSize = 24;
             this.addCustomerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addCustomerButton.Location = new System.Drawing.Point(0, 0);
             this.addCustomerButton.Name = "addCustomerButton";
@@ -209,6 +218,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.customersButton.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.customersButton.IconColor = System.Drawing.Color.Gainsboro;
             this.customersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.customersButton.IconSize = 32;
             this.customersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customersButton.Location = new System.Drawing.Point(0, 290);
             this.customersButton.Name = "customersButton";
@@ -242,7 +252,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.listOrdersButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.listOrdersButton.IconColor = System.Drawing.Color.Gainsboro;
             this.listOrdersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.listOrdersButton.IconSize = 12;
+            this.listOrdersButton.IconSize = 24;
             this.listOrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.listOrdersButton.Location = new System.Drawing.Point(0, 45);
             this.listOrdersButton.Name = "listOrdersButton";
@@ -265,7 +275,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.newOrderButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.newOrderButton.IconColor = System.Drawing.Color.Gainsboro;
             this.newOrderButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.newOrderButton.IconSize = 12;
+            this.newOrderButton.IconSize = 24;
             this.newOrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newOrderButton.Location = new System.Drawing.Point(0, 0);
             this.newOrderButton.Name = "newOrderButton";
@@ -288,6 +298,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.ordersButton.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.ordersButton.IconColor = System.Drawing.Color.Gainsboro;
             this.ordersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ordersButton.IconSize = 32;
             this.ordersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ordersButton.Location = new System.Drawing.Point(0, 150);
             this.ordersButton.Name = "ordersButton";
@@ -310,6 +321,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.dashboardButton.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
             this.dashboardButton.IconColor = System.Drawing.Color.Gainsboro;
             this.dashboardButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.dashboardButton.IconSize = 32;
             this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboardButton.Location = new System.Drawing.Point(0, 100);
             this.dashboardButton.Name = "dashboardButton";
@@ -330,17 +342,63 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoPanel.Size = new System.Drawing.Size(250, 100);
             this.logoPanel.TabIndex = 0;
             // 
+            // headerPanel
+            // 
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(120)))), ((int)(((byte)(87)))));
+            this.headerPanel.Controls.Add(this.label1);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(250, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(814, 60);
+            this.headerPanel.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.label1.Size = new System.Drawing.Size(195, 62);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Dashboard";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(250, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(814, 2);
+            this.panel2.TabIndex = 2;
+            // 
+            // childFromPanel
+            // 
+            this.childFromPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.childFromPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFromPanel.Location = new System.Drawing.Point(250, 62);
+            this.childFromPanel.Name = "childFromPanel";
+            this.childFromPanel.Size = new System.Drawing.Size(814, 614);
+            this.childFromPanel.TabIndex = 3;
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 707);
+            this.ClientSize = new System.Drawing.Size(1064, 676);
+            this.Controls.Add(this.childFromPanel);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidemenuPanel);
             this.Name = "MainWindowForm";
             this.Text = "MainWindowForm";
             this.sidemenuPanel.ResumeLayout(false);
             this.customersSubmenuPanel.ResumeLayout(false);
             this.ordersSubmenuPanel.ResumeLayout(false);
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,6 +419,10 @@ namespace PoppelOrderingSystem.PresentationLayer
         private FontAwesome.Sharp.IconButton addCustomerButton;
         private FontAwesome.Sharp.IconButton customersButton;
         private FontAwesome.Sharp.IconButton logoutButton;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel spacingPanel;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel childFromPanel;
     }
 }
