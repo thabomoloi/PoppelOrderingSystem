@@ -15,6 +15,7 @@ namespace PoppelOrderingSystem.PresentationLayer
     {
         #region Fields
         private IconButton activeButton;
+        private Form activeChildForm;
         #endregion
 
         #region Constructor
@@ -94,13 +95,14 @@ namespace PoppelOrderingSystem.PresentationLayer
         private void customersButton_Click(object sender, EventArgs e)
         {
             ShowSubmenu(customersSubmenuPanel);
-            ActivateButton(sender);
         }
 
         #region Customers Submenu
         private void addCustomerButton_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(customersButton);
+            HideAllSubmenu();
+            OpenChildForm(new CustomerForm());
         }
 
         private void listCustomersButton_Click(object sender, EventArgs e)
@@ -125,6 +127,25 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             HideAllSubmenu();
             ActivateButton(sender);
+        }
+        #endregion
+
+        #region Child Form Handler
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeChildForm != null)
+                activeChildForm.Close();
+
+            activeChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            childFormPanel.Controls.Add(childForm);
+            childFormPanel.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
         }
         #endregion
     }

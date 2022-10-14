@@ -47,7 +47,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.childFromPanel = new System.Windows.Forms.Panel();
+            this.childFormPanel = new System.Windows.Forms.Panel();
             this.sidemenuPanel.SuspendLayout();
             this.customersSubmenuPanel.SuspendLayout();
             this.ordersSubmenuPanel.SuspendLayout();
@@ -374,21 +374,21 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel2.Size = new System.Drawing.Size(814, 2);
             this.panel2.TabIndex = 2;
             // 
-            // childFromPanel
+            // childFormPanel
             // 
-            this.childFromPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.childFromPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFromPanel.Location = new System.Drawing.Point(250, 62);
-            this.childFromPanel.Name = "childFromPanel";
-            this.childFromPanel.Size = new System.Drawing.Size(814, 614);
-            this.childFromPanel.TabIndex = 3;
+            this.childFormPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFormPanel.Location = new System.Drawing.Point(250, 62);
+            this.childFormPanel.Name = "childFormPanel";
+            this.childFormPanel.Size = new System.Drawing.Size(814, 614);
+            this.childFormPanel.TabIndex = 3;
             // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 676);
-            this.Controls.Add(this.childFromPanel);
+            this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidemenuPanel);
@@ -423,6 +423,6 @@ namespace PoppelOrderingSystem.PresentationLayer
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel childFromPanel;
+        private System.Windows.Forms.Panel childFormPanel;
     }
 }
