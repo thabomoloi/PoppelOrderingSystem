@@ -59,6 +59,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ColorsRGB.cs" />
     <Compile Include="PresentationLayer\MainWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
