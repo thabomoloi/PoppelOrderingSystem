@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
-    internal class CustomerController
+    public class CustomerController
     {
+        #region Data Members
+        private ICollection<Customer> customers;
+
+        #endregion
+
+        #region Poperties
+        public ICollection<Customer> AllCustomers
+        {
+            get { return customers; }
+        }
+        #endregion
+
+        #region Constructor 
+        public CustomerController()
+        {
+
+        }
+        #endregion
     }
 }
