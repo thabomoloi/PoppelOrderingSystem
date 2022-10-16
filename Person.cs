@@ -26,7 +26,7 @@ namespace PoppelOrderingSystem
         #endregion
 
         #region data members
-        private string  name, Phone, email;
+        private string  name, Phone, email, address;
         #endregion
 
         #region Properties
@@ -47,28 +47,37 @@ namespace PoppelOrderingSystem
             get { return email; }
             set { email = value; }
         }
+       
+
+       public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
         #endregion
 
-        #region Construtor
+        #region Constructor
         public Person()
         {
             name = "";
             Phone = "";
             email = "";
+            address = "";
         }
 
-        public Person(string pName, string pPhone, string pEmail)
+        public Person(string pName, string pPhone, string pEmail, string pAddress)
         {
             name = pName;
             Phone = pPhone;
             email = pEmail;
+            address = pAddress;
         }
         #endregion
 
         #region ToStringMethod
         public override string ToString()
         {
-            return name + '\n' + Phone + '\n' + email;
+            return name + '\n' + Phone + '\n' + email + '\n' + address;
         }
 
         #endregion
