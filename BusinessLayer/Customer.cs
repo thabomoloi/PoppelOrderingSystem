@@ -4,12 +4,20 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
     public class Customer : Person
     {
+        #region Enumeration
+        public enum CreditStatus
+        {
+            OnHold = 1,
+            Released = 2
+        }
+        #endregion
         #region Data Members
         //encapsulation
         private string customerNo;
@@ -18,8 +26,11 @@ namespace PoppelOrderingSystem.BusinessLayer
         public CreditStatus creditStatus;
         #endregion
 
-        #region Property methods
-        public string CustomerNo
+        #region Property Methods
+        [DisplayName("Customer Number")]
+        [Required(ErrorMessage = "Customer number is required.")]
+        [StringLength(20, MinimumLength = 5, ErrorMessage = "Customer number must be between 5 and 20 characters")]
+        public string CustomerNumber 
         {
             get { return customerNo; }
             set { customerNo = value; }
@@ -31,31 +42,11 @@ namespace PoppelOrderingSystem.BusinessLayer
         }
         #endregion
 
-        #region Constructor
-        /*
-         * Include the constructor of the class.                                                                                                           
-            The constructor should have one argument roleValue of type Role. 
-            This is because upon the invocation of this class, the role of the employee should be determined.
-            Use a switch statement to find the specific role as follows (for more on switch statements):
-            If there is no role yet, then:                  role = new Role ();
-            If the role is Headwaiter, then:                     role = new HeadWaiter ();
-
-         */
-
-        public Customer(CreditStatus.Status statusValue)
+        #region Constructors
+        public Customer(double custCreditLimit, CreditStatus custCreditStatus)
         {
-            switch (statusValue)
-            {
-                case CreditStatus.Status.NoStatus:
-                    creditStatus = new CreditStatus();
-                    break;
-                case CreditStatus.Status.Success:
-                    Console.WriteLine("Released");
-                    break;
-                case CreditStatus.Status.Failure:
-                    Console.WriteLine("On Hold");
-                    break;
-            }
+            creditLimit = custCreditLimit;
+            creditStatus = custCreditStatus;
         }
         #endregion
     }
