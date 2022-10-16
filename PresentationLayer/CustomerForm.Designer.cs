@@ -44,7 +44,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.formHeader = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -230,7 +230,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             this.panel1.Controls.Add(this.panel19);
             this.panel1.Controls.Add(this.panel18);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.formHeader);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(11, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -255,17 +255,17 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel18.Size = new System.Drawing.Size(723, 5);
             this.panel18.TabIndex = 1;
             // 
-            // label3
+            // formHeader
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Enter Customer Details:";
+            this.formHeader.AutoSize = true;
+            this.formHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.formHeader.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formHeader.Location = new System.Drawing.Point(0, 0);
+            this.formHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.formHeader.Name = "formHeader";
+            this.formHeader.Size = new System.Drawing.Size(185, 30);
+            this.formHeader.TabIndex = 0;
+            this.formHeader.Text = "Customer Details:";
             // 
             // panel4
             // 
@@ -548,7 +548,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label formHeader;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
