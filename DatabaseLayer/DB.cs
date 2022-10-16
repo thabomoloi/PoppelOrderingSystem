@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PoppelOrderingSystem.DatabaseLayer
 {
@@ -43,6 +44,56 @@ namespace PoppelOrderingSystem.DatabaseLayer
 
         #endregion
 
-        
+        #region Constructor 
+        /// <summary>
+        /// Creates a new DB object.
+        /// </summary>
+        public DB()
+        {
+            try
+            {
+                // Open a new connection object
+                cnMain = new SqlConnection(strConn);
+                // Create a new dataset object
+                dsMain = new DataSet();
+            }
+            catch (SystemException e)
+            {
+                // Show exception
+                MessageBox.Show(e.Message, "Error");
+                return;
+            }
+        }
+        #endregion
+
+        #region Fill dataset 
+        /// <summary>
+        /// Fills dataset fresh from the db for a specific table and with a specific Query
+        /// </summary>
+        /// <param name="aSQLstring">SQL query</param>
+        /// <param name="aTable">Table name</param>
+        public void FillDataSet(string aSQLstring, string aTable)
+        {
+            try
+            {
+                // Create an instance of the data adapter (daMain). 
+                daMain = new SqlDataAdapter(aSQLstring, cnMain);
+                // Opens a database connection with the property settings specified by the ConnectionString.
+                cnMain.Open();
+
+                //Adds or refreshes rows in the DataSet to match those in the data source
+                //is used to populate a DataSet with the results of the SelectCommand of the DataAdapter.
+                //Fill takes as its arguments a DataSet to be populated, and a DataTable object, or the name of the DataTable to be filled with the rows returned from the SelectCommand.
+                daMain.Fill(dsMain, aTable);
+
+                //close the connection              
+                cnMain.Close();     
+            }
+            catch (Exception errObj)
+            {
+                MessageBox.Show(errObj.Message + "  " + errObj.StackTrace);
+            }
+        }
+        #endregion
     }
 }
