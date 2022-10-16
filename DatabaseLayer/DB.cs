@@ -95,5 +95,53 @@ namespace PoppelOrderingSystem.DatabaseLayer
             }
         }
         #endregion
+
+        #region Update the data source
+        /// <summary>
+        /// Update the data source.
+        /// </summary>
+        /// <param name="sqlLocal">SQL statement to be used to do the update</param>
+        /// <param name="table">The table which needs to be updated</param>
+        /// <returns>true if the update was successfule, else false</returns>
+        protected bool UpdateDataSource(string sqlLocal, string table)
+        {
+            bool success; // Boolean variable success that will signal the successful update
+            try
+            {
+                // open the connection
+                cnMain.Open();   
+
+                #region Update the database table via the data adapter
+                daMain.Update(dsMain, table);
+                /*
+                 The Update method of the DataAdapter is called to resolve changes from a DataSet
+                 back to the data source. The Update method, like the Fill method, takes as arguments
+                 an instance of a DataSet, and an optional DataTable object or DataTable name.
+                 When you call the Update method, the DataAdapter analyzes the changes that have been made and
+                 executes the appropriate command (INSERT, UPDATE, or DELETE). When the DataAdapter encounters a 
+                 change to a DataRow, it uses the InsertCommand, UpdateCommand, or DeleteCommand to process the change. 
+                 */
+
+                #endregion
+
+                cnMain.Close(); // close the connection
+
+                #region  Fill the dataset with the SQL statement sqlLocal and the specific table table
+                FillDataSet(sqlLocal, table); //refresh the dataset using the SQL statement; and the Table from which the query will emanate from
+                #endregion
+
+                success = true;// The variable success returns true (Assign true to the variable success).
+            }
+            catch (Exception errObj)
+            {
+                MessageBox.Show(errObj.Message + "  " + errObj.StackTrace);
+                success = false;
+            }
+            finally
+            {
+            }
+            return success;
+        }
+        #endregion
     }
 }
