@@ -47,7 +47,7 @@ namespace PoppelOrderingSystem
             get { return email; }
             set { email = value; }
         }
-       
+
 
        public string Address
         {
