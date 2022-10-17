@@ -4,8 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+using System.Xml.Linq;
+=======
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+>>>>>>> c974bcf2ed6e578f69b06049d65b3ea50b1685a1
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
@@ -30,19 +34,19 @@ namespace PoppelOrderingSystem.BusinessLayer
         [DisplayName("Customer Number")]
         [Required(ErrorMessage = "Customer number is required.")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Customer number must be between 5 and 20 characters")]
-        public string CustomerNumber 
-        {
-            get { return customerNo; }
-            set { customerNo = value; }
-        }
-        public double CreditLimit
-        {
-            get { return creditLimit; }
+       
+        public string CustomerNumber   
+            { get { return customerNo; } set { customerNo = value; } }
+
+        public double CreditLimit { 
+            get { return creditLimit; } 
             set { creditLimit = value; }
         }
         #endregion
 
+
         #region Constructors
+
         public Customer(double custCreditLimit, CreditStatus custCreditStatus)
         {
             creditLimit = custCreditLimit;
