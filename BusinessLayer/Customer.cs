@@ -14,6 +14,9 @@ namespace PoppelOrderingSystem.BusinessLayer
     public class Customer : Person
     {
         #region Enumeration
+        /// <summary>
+        /// Customer's credit status
+        /// </summary>
         public enum CreditStatus
         {
             OnHold = 1,
