@@ -81,11 +81,15 @@
       <DependentUpon>PoppelDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ColorsRGB.cs" />
-    <Compile Include="PresentationLayer\CustomerForm.cs" />
+    <Compile Include="PresentationLayer\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PresentationLayer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\MainWindowForm.cs" />
+    <Compile Include="PresentationLayer\MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PresentationLayer\MainWindowForm.Designer.cs">
       <DependentUpon>MainWindowForm.cs</DependentUpon>
     </Compile>
