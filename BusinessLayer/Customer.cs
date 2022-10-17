@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-
+using System.Collections.ObjectModel;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
@@ -24,21 +24,26 @@ namespace PoppelOrderingSystem.BusinessLayer
             NoCredit = 3
         }
         #endregion
+
         #region Data Members
         //encapsulation
         private string customerNo;
         private double creditLimit;
         //need to define credit status here,the creditStatus data member of this class is of class type CreditStatus.
         private CreditStatus creditStatus;
+
+        private Collection<Address> addresses;
         #endregion
 
         #region Property Methods
         [DisplayName("Customer Number")]
         [Required(ErrorMessage = "Customer number is required.")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Customer number must be between 5 and 20 characters")]
-
         public string CustomerNumber
-        { get { return customerNo; } set { customerNo = value; } }
+        { 
+            get { return customerNo; } 
+            set { customerNo = value; } 
+        }
 
         public double CreditLimit
         {
@@ -51,8 +56,13 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return creditStatus; }
             set { creditStatus = value;  }
         }
-        #endregion
 
+        public Collection<Address> AllAddresses
+        {
+            get { return addresses;  }
+            set { addresses = value;  }
+        }
+        #endregion
 
         #region Constructors
 
