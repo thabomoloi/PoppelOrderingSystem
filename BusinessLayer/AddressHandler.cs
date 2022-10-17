@@ -8,7 +8,7 @@ using PoppelOrderingSystem.DatabaseLayer;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
-    public class AddressController
+    public class AddressHandler
     {
         #region Data members
         /// <summary>
@@ -33,7 +33,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #endregion
 
         #region Constructor 
-        public AddressController()
+        public AddressHandler()
         {
             // Instatiate address DB to connect with the database
             addressDB = new AddressDB();
@@ -78,7 +78,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #region Search Methods
 
         #region Find By CustNo
-        public Collection<Address> FilterCustNo(Collection<Address> addrs, string custNo)
+        public Collection<Address> FindByCustNo(Collection<Address> addrs, string custNo)
         {
             Collection<Address> matches = new Collection<Address>();
 
