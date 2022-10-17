@@ -86,7 +86,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logoutButton.IconSize = 32;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 590);
+            this.logoutButton.Location = new System.Drawing.Point(0, 584);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.logoutButton.Size = new System.Drawing.Size(220, 50);
@@ -102,7 +102,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.spacingPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.spacingPanel.Location = new System.Drawing.Point(0, 530);
             this.spacingPanel.Name = "spacingPanel";
-            this.spacingPanel.Size = new System.Drawing.Size(220, 60);
+            this.spacingPanel.Size = new System.Drawing.Size(220, 54);
             this.spacingPanel.TabIndex = 9;
             // 
             // reportButton

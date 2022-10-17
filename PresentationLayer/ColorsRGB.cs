@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace PoppelOrderingSystem.PresentationLayer
 {
-    public class ColorsRGB
+    public class ColorsRGB 
     {
+
         #region Static Fields
         #region Emerald Color
         public static Color EMERALD_900 { get { return Color.FromArgb(6, 78, 59); } }
