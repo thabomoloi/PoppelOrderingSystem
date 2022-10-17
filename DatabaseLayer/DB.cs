@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PoppelOrderingSystem.Properties;
 
 namespace PoppelOrderingSystem.DatabaseLayer
 {
@@ -27,7 +28,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
 
         #region Private 
         ///<summary>Represents the connection string</summary> 
-        private string strConn = "";
+        private string strConn = Settings.Default.PoppelDatabaseConnectionString;
         #endregion
 
         #region Protected - To be inherited by subclassess
