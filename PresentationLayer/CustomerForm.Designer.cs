@@ -276,7 +276,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(723, 235);
+            this.panel4.Size = new System.Drawing.Size(723, 246);
             this.panel4.TabIndex = 40;
             // 
             // panel3
@@ -293,7 +293,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
             this.tableLayoutPanel3.Controls.Add(this.textBox9, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.provinceComboBox, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.suburbTextBox, 1, 1);
@@ -460,7 +460,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel5.Controls.Add(this.clearButton);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(11, 453);
+            this.panel5.Location = new System.Drawing.Point(11, 464);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(723, 44);
