@@ -205,13 +205,13 @@ namespace PoppelOrderingSystem.DatabaseLayer
             param = new SqlParameter("@Suburb", SqlDbType.NVarChar, 50, "Suburb");
             daMain.InsertCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@Province", SqlDbType.NVarChar, 15, "Province");
+            param = new SqlParameter("@Province", SqlDbType.NVarChar, 50, "Province");
             daMain.InsertCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@City", SqlDbType.NVarChar, 15, "City");
+            param = new SqlParameter("@City", SqlDbType.NVarChar, 50, "City");
             daMain.InsertCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@PostalCode", SqlDbType.NVarChar, 15, "PostalCode");
+            param = new SqlParameter("@PostalCode", SqlDbType.NVarChar, 4, "PostalCode");
             daMain.InsertCommand.Parameters.Add(param);
 
             param = new SqlParameter("@CustomerNumber", SqlDbType.NVarChar, 15, "CustomerNumber");
@@ -236,15 +236,15 @@ namespace PoppelOrderingSystem.DatabaseLayer
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@Province", SqlDbType.NVarChar, 15, "Province");
+            param = new SqlParameter("@Province", SqlDbType.NVarChar, 50, "Province");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@City", SqlDbType.NVarChar, 15, "City");
+            param = new SqlParameter("@City", SqlDbType.NVarChar, 50, "City");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@PostalCode", SqlDbType.NVarChar, 15, "PostalCode");
+            param = new SqlParameter("@PostalCode", SqlDbType.NVarChar, 4, "PostalCode");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
@@ -300,7 +300,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         {
             //Create the command that must be used to insert values into table
             //Assumption is that the address number
-            daMain.UpdateCommand = new SqlCommand("UPDATE Addresses SET Street =@Street, Suburb =@LastNme, Province =@Phne, City =@City, PostalCode =@PostalCode, CustomerNumber =@CustomerNumber " + "WHERE AddressID = @Original_ID", cnMain);
+            daMain.UpdateCommand = new SqlCommand("UPDATE Addresses SET Street =@Street, Suburb =@Suburb, Province =@Province, City =@City, PostalCode =@PostalCode, CustomerNumber =@CustomerNumber " + "WHERE AddressID = @Original_ID", cnMain);
             Build_UPDATE_Parameters();
         }
         #endregion
