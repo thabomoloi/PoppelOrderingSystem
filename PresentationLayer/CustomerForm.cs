@@ -16,5 +16,27 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             InitializeComponent();
         }
+
+        #region Clear All TextBox Controls
+        private void ClearAll()
+        {
+            custNoTextBox.Text = "";
+            firstNameTextBox.Text = "";
+            lastNameTextBox.Text = "";
+            phoneNoTextBox.Text = "";
+            emailTextBox.Text = "";
+            streetTextBox.Text = "";
+            cityTextBox.Text = "";
+            suburbTextBox.Text = "";
+            postCodeTextBox.Text = "";
+            provinceComboBox.ResetText();
+        }
+        #endregion
+        #region ClearButton Click Event
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+        #endregion
     }
 }

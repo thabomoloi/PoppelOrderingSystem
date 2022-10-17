@@ -48,16 +48,16 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.provinceComboBox = new System.Windows.Forms.Label();
+            this.postCodeTextBox = new System.Windows.Forms.TextBox();
+            this.provLabel = new System.Windows.Forms.Label();
             this.suburbTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.streetTextBox = new System.Windows.Forms.TextBox();
-            this.cityTextBox = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.postCodeTextBox = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.provinceComboBox = new System.Windows.Forms.ComboBox();
+            this.postCodLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -294,16 +294,16 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox9, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.provinceComboBox, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.postCodeTextBox, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.provLabel, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.suburbTextBox, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label22, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label21, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.streetTextBox, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cityTextBox, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox8, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.postCodeTextBox, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.label, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cityTextBox, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.provinceComboBox, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.postCodLabel, 0, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -316,26 +316,26 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 177);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // textBox9
+            // postCodeTextBox
             // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(115, 142);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(282, 29);
-            this.textBox9.TabIndex = 10;
+            this.postCodeTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.postCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postCodeTextBox.Location = new System.Drawing.Point(115, 142);
+            this.postCodeTextBox.Name = "postCodeTextBox";
+            this.postCodeTextBox.Size = new System.Drawing.Size(282, 29);
+            this.postCodeTextBox.TabIndex = 10;
             // 
-            // provinceComboBox
+            // provLabel
             // 
-            this.provinceComboBox.AutoSize = true;
-            this.provinceComboBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.provinceComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provinceComboBox.Location = new System.Drawing.Point(3, 104);
-            this.provinceComboBox.Name = "provinceComboBox";
-            this.provinceComboBox.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.provinceComboBox.Size = new System.Drawing.Size(106, 31);
-            this.provinceComboBox.TabIndex = 7;
-            this.provinceComboBox.Text = "Province:";
+            this.provLabel.AutoSize = true;
+            this.provLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.provLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provLabel.Location = new System.Drawing.Point(3, 104);
+            this.provLabel.Name = "provLabel";
+            this.provLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.provLabel.Size = new System.Drawing.Size(106, 31);
+            this.provLabel.TabIndex = 7;
+            this.provLabel.Text = "Province:";
             // 
             // suburbTextBox
             // 
@@ -380,33 +380,34 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.streetTextBox.Size = new System.Drawing.Size(282, 29);
             this.streetTextBox.TabIndex = 1;
             // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(3, 71);
+            this.label.Name = "label";
+            this.label.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label.Size = new System.Drawing.Size(106, 31);
+            this.label.TabIndex = 4;
+            this.label.Text = "City:";
+            // 
             // cityTextBox
             // 
-            this.cityTextBox.AutoSize = true;
             this.cityTextBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.cityTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityTextBox.Location = new System.Drawing.Point(3, 71);
+            this.cityTextBox.Location = new System.Drawing.Point(115, 74);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.cityTextBox.Size = new System.Drawing.Size(106, 31);
-            this.cityTextBox.TabIndex = 4;
-            this.cityTextBox.Text = "City:";
+            this.cityTextBox.Size = new System.Drawing.Size(282, 29);
+            this.cityTextBox.TabIndex = 5;
             // 
-            // textBox8
+            // provinceComboBox
             // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(115, 74);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(282, 29);
-            this.textBox8.TabIndex = 5;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.provinceComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.provinceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.provinceComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinceComboBox.FormattingEnabled = true;
+            this.provinceComboBox.Items.AddRange(new object[] {
             "Eastern Cape",
             "Free State",
             "Gauteng",
@@ -416,22 +417,22 @@ namespace PoppelOrderingSystem.PresentationLayer
             "North West",
             "Northern Cape",
             "Western Cape"});
-            this.comboBox1.Location = new System.Drawing.Point(115, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 29);
-            this.comboBox1.TabIndex = 8;
+            this.provinceComboBox.Location = new System.Drawing.Point(115, 107);
+            this.provinceComboBox.Name = "provinceComboBox";
+            this.provinceComboBox.Size = new System.Drawing.Size(282, 29);
+            this.provinceComboBox.TabIndex = 8;
             // 
-            // postCodeTextBox
+            // postCodLabel
             // 
-            this.postCodeTextBox.AutoSize = true;
-            this.postCodeTextBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.postCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postCodeTextBox.Location = new System.Drawing.Point(3, 139);
-            this.postCodeTextBox.Name = "postCodeTextBox";
-            this.postCodeTextBox.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.postCodeTextBox.Size = new System.Drawing.Size(106, 31);
-            this.postCodeTextBox.TabIndex = 9;
-            this.postCodeTextBox.Text = "Postal Code:";
+            this.postCodLabel.AutoSize = true;
+            this.postCodLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.postCodLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postCodLabel.Location = new System.Drawing.Point(3, 139);
+            this.postCodLabel.Name = "postCodLabel";
+            this.postCodLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.postCodLabel.Size = new System.Drawing.Size(106, 31);
+            this.postCodLabel.TabIndex = 9;
+            this.postCodLabel.Text = "Postal Code:";
             // 
             // panel2
             // 
@@ -495,6 +496,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.clearButton.TabIndex = 0;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // panel12
             // 
@@ -552,16 +554,16 @@ namespace PoppelOrderingSystem.PresentationLayer
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label provinceComboBox;
+        private System.Windows.Forms.TextBox postCodeTextBox;
+        private System.Windows.Forms.Label provLabel;
         private System.Windows.Forms.TextBox suburbTextBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox streetTextBox;
-        private System.Windows.Forms.Label cityTextBox;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label postCodeTextBox;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox cityTextBox;
+        private System.Windows.Forms.ComboBox provinceComboBox;
+        private System.Windows.Forms.Label postCodLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel5;
