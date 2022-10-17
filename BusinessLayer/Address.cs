@@ -9,7 +9,7 @@ namespace PoppelOrderingSystem.BusinessLayer
     public class Address
     {
         #region Data Members
-        private string addressID, street, suburb, city, province, postalCode;
+        private string addressID, street, suburb, city, province, postalCode, customerNumber;
         #endregion
 
         #region Constrctors
@@ -24,6 +24,7 @@ namespace PoppelOrderingSystem.BusinessLayer
             city = "";
             province = "";
             postalCode = "";
+            customerNumber = "";
         }
         /// <summary>
         /// Create a new Address object given details
@@ -34,7 +35,8 @@ namespace PoppelOrderingSystem.BusinessLayer
         /// <param name="aCity"></param>
         /// <param name="aProvince"></param>
         /// <param name="aPostalCode"></param>
-        public Address(String addrID, String aStreet, String aSuburb, String aCity, String aProvince, String aPostalCode)
+        /// <param name="aCustNumber"></param>
+        public Address(String addrID, String aStreet, String aSuburb, String aCity, String aProvince, String aPostalCode, string aCustNumber)
         {
             addressID = addrID;
             street = aStreet;
@@ -42,6 +44,7 @@ namespace PoppelOrderingSystem.BusinessLayer
             city = aCity;
             province = aProvince;
             postalCode = aPostalCode;
+            customerNumber = aCustNumber;
         }
         #endregion
 
@@ -77,6 +80,11 @@ namespace PoppelOrderingSystem.BusinessLayer
             set { postalCode = value; }
         }
 
+        public string CustomerNumber
+        {
+            get { return customerNumber; }
+            set { customerNumber = value; }
+        }
         #endregion
     }
 }
