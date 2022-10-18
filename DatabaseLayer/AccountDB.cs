@@ -194,9 +194,6 @@ namespace PoppelOrderingSystem.DatabaseLayer
             // Create Parameters to communicate with SQL INSERT add the input parameter and set its properties.             
             SqlParameter param = default(SqlParameter);
 
-            param = new SqlParameter("@AccountNumber", SqlDbType.Int, 4, "AccountNumber");
-            daMain.InsertCommand.Parameters.Add(param); //Add the parameter to the Parameters collection.
-
             param = new SqlParameter("@DateOpened", SqlDbType.Date, 3, "DateOpened");
             daMain.InsertCommand.Parameters.Add(param);
 

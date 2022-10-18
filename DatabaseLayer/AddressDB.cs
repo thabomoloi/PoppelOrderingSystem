@@ -117,7 +117,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             aRow["Province"] = anAddr.Province;
             aRow["City"] = anAddr.City;
             aRow["PostalCode"] = anAddr.PostalCode;
-            aRow["CustomerNumber] = anAddr.CustomerNumber
+            aRow["CustomerNumber"] = anAddr.CustomerNumber;
         }
         #endregion
 
@@ -285,8 +285,8 @@ namespace PoppelOrderingSystem.DatabaseLayer
         private void Create_INSERT_Command()
         {
             //Create the command that must be used to insert values into the table..
-            daMain.InsertCommand = new SqlCommand("INSERT into Addresses (AddressID, Street, Suburb, Province, City, PostalCode, CustomerNumber)" +
-                " VALUES (@AddressID, @Street, @Suburb, @Province, @City, @PostalCode, @CustomerNumber)", cnMain);
+            daMain.InsertCommand = new SqlCommand("INSERT into Addresses (Street, Suburb, Province, City, PostalCode, CustomerNumber)" +
+                " VALUES (@Street, @Suburb, @Province, @City, @PostalCode, @CustomerNumber)", cnMain);
             Build_INSERT_Parameters();
         }
         #endregion
