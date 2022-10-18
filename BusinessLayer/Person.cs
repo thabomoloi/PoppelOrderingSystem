@@ -23,7 +23,7 @@ namespace PoppelOrderingSystem
             get { return firstName + " " + lastName; }
         }
         [DisplayName("First Name")]
-        [Required(ErrorMessage = "First name is required")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "First name is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "First name must be between 3 and 50 characters")]
         public string FirstName
         {
@@ -31,7 +31,7 @@ namespace PoppelOrderingSystem
             set { firstName = value; }
         }
         [DisplayName("Last Name")]
-        [Required(ErrorMessage = "Last name is required")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Last name is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Last name must be between 3 and 50 characters")]
         public string LastName
         {
@@ -39,7 +39,7 @@ namespace PoppelOrderingSystem
             set { lastName = value; }
         }
         [DisplayName("Phone Number")]
-        [Required(ErrorMessage = "Phone number is required")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Phone number is required")]
         [RegularExpression("^[0-9]+$", ErrorMessage = "Phone number should only contain digits")]
         [StringLength(10, MinimumLength = 10, ErrorMessage = "Phone number must only contain 10 digits")]
         public string Telephone
