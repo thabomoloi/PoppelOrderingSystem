@@ -84,7 +84,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
                     // Instantiate a new Address object
                     anAddr = new Address();
                     // Obtain each Address attribute from the specific field in the row in the table
-                    anAddr.AddressID = Convert.ToString(myRow["AddressID"]).TrimEnd();
+                    anAddr.AddressID = Convert.ToInt32(myRow["AddressID"]);
                     anAddr.Street = Convert.ToString(myRow["Street"]).TrimEnd();
                     anAddr.Suburb = Convert.ToString(myRow["Suburb"]).TrimEnd();
                     anAddr.City = Convert.ToString(myRow["City"]).TrimEnd();
@@ -140,7 +140,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
                 if (!(myRow.RowState == DataRowState.Deleted))
                 {
                     // Assign rowIndex to returnValue if address number is found
-                    if (anAddr.AddressID == Convert.ToString(dsMain.Tables[table].Rows[rowIndex]["AddressID"]))
+                    if (anAddr.AddressID == Convert.ToInt32(dsMain.Tables[table].Rows[rowIndex]["AddressID"]))
                     {
                         returnValue = rowIndex;
                     }

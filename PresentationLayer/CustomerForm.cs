@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PoppelOrderingSystem.BusinessLayer;
+using PoppelOrderingSystem.DatabaseLayer;
 
 namespace PoppelOrderingSystem.PresentationLayer
 {
@@ -25,10 +26,10 @@ namespace PoppelOrderingSystem.PresentationLayer
         private Customer customer;
 
         private AddressHandler addressHandler;
-        private Address address;
-
         private AccountHandler accountHandler;
+
         private Account account;
+        private Address address;
 
         private bool custFormClosed = false;
         #endregion
@@ -65,61 +66,70 @@ namespace PoppelOrderingSystem.PresentationLayer
         #endregion
 
         #region Validate input
-        private void ValidateInput(object myObject)
+        private bool ValidateInput(object myObject)
         {
             List<ValidationResult> results = new List<ValidationResult>();
             ValidationContext context = new ValidationContext(myObject, null, null);
-            bool success = Validator.TryValidateObject(myObject, context, results);
+            bool success = Validator.TryValidateObject(myObject, context, results, true);
 
             if (!success)
             {
                 foreach (ValidationResult result in results)
-                    MessageBox.Show(result.ErrorMessage);
+                {
+                    MessageBox.Show(result.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return success;
+                }
             }
+            return success;
         }
         #endregion
-        #region Populate the objects
-        private void PopulateObjects()
+
+        #region Populate object 
+        private bool PopulateObject()
         {
-            // Allocate credit limit of 1500 to customer
-            customer = new Customer(1500, Customer.CreditStatus.OnHold);
-            address = new Address();
-            account = new Account();
+            customer = new Customer(1500, Customer.CreditStatus.Released)
+            {
+                CustomerNumber = custNoTextBox.Text.Trim(),
+                FirstName = firstNameTextBox.Text.Trim(),
+                LastName = lastNameTextBox.Text.Trim(),
+                Telephone = phoneNoTextBox.Text.Trim()
+            };
 
-            #region Populate customer object
 
-            customer.CustomerNumber = custNoTextBox.Text.Trim();
-            customer.FirstName = firstNameTextBox.Text.Trim();
-            customer.LastName = lastNameTextBox.Text.Trim();
-            customer.Telephone = phoneNoTextBox.Text.Trim();
-            customer.Email = emailTextBox.Text.Trim();
+            address = new Address
+            {
+                Street = streetTextBox.Text.Trim(),
+                City = cityTextBox.Text.Trim(),
+                Suburb = suburbTextBox.Text.Trim(),
+                Province = provinceComboBox.SelectedItem.ToString(),
+                PostalCode = postCodeTextBox.Text.Trim(),
+                CustomerNumber = customer.CustomerNumber
+            };
 
-            ValidateInput(customer);
-            #endregion
+            account = new Account
+            {
+                CustomerNumber = customer.CustomerNumber,
+                AvailableCredit = 1500,
+                Balance = 0,
+                DateOpened = DateTime.Now
+            };
 
-            #region Populate the account object
-
-            account.CustomerNumber = customer.CustomerNumber;
-            account.DateOpened = DateTime.Now;
-            account.IsOpen = true;
-            account.AvailableCredit = 1500; // credit
-            account.Balance = 0;
-
-            #endregion
-
-            #region Populate address object
-
-            address.Street = streetTextBox.Text.Trim();
-            address.Suburb = suburbTextBox.Text.Trim();
-            address.City = cityTextBox.Text.Trim();
-            address.Province = provinceComboBox.SelectedItem.ToString().Trim();
-            address.PostalCode = postCodeTextBox.Text.Trim();
-
-            #endregion
-
+            bool validCustomer = ValidateInput(customer);
+            return validCustomer;
         }
         #endregion
 
+        #region Add to database 
+        private void InsertDataToDatabse()
+        {
+            MessageBox.Show("To be submitted to the Database!");
+            customerController.DataMaintenance(customer, DB.DBOperation.Add);
+            customerController.FinalizeChanges();
+            addressHandler.DataMaintenance(address, DB.DBOperation.Add);
+            addressHandler.FinalizeChanges();
+            accountHandler.DataMaintenance(account, DB.DBOperation.Add);
+            accountHandler.FinalizeChanges();
+        }
         #endregion
 
         #region Click Events
@@ -130,8 +140,16 @@ namespace PoppelOrderingSystem.PresentationLayer
         
         private void submitButton_Click(object sender, EventArgs e)
         {
-            PopulateObjects();
+            bool populated = PopulateObject();
+            if (populated)
+            {
+                InsertDataToDatabse();
+                ClearAll();
+            }
+            
         }
+        #endregion
+
         #endregion
     }
 }

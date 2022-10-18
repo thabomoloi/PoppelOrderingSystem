@@ -67,7 +67,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #endregion
 
         #region Finalize Changes
-        public bool FinalizeAddressAdd()
+        public bool FinalizeChanges()
         {
             return addressDB.UpdateDataSource();
         }
@@ -97,7 +97,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         /// </summary>
         /// <param name="addressNumber">Address number</param>
         /// <returns>Address collection</returns>
-        public Address Find(string addressNumber)
+        public Address Find(int addressNumber)
         {
             int index = 0;
             bool found = (addresses[index].AddressID == addressNumber);  //check if it is the first record

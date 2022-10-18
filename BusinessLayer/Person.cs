@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace PoppelOrderingSystem
+namespace PoppelOrderingSystem.BusinessLayer
 {
-    public class Person
+    public class Person: EntityValidator
     {
 
         #region data members
@@ -54,13 +54,6 @@ namespace PoppelOrderingSystem
             get { return email; }
             set { email = value; }
         }
-
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
         #endregion
 
         #region Constructor
@@ -86,7 +79,7 @@ namespace PoppelOrderingSystem
         #region ToStringMethod
         public override string ToString()
         {
-            return Name + '\n' + Telephone + '\n' + Email + '\n' + Address;
+            return Name + '\n' + Telephone + '\n' + Email + '\n';
         }
 
         #endregion

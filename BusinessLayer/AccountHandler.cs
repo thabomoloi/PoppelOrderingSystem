@@ -67,7 +67,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #endregion
 
         #region Finalize Changes
-        public bool FinalizeAccountAdd()
+        public bool FinalizeChanges()
         {
             return accountDB.UpdateDataSource();
         }

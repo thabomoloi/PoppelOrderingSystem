@@ -11,7 +11,7 @@ using System.Collections.ObjectModel;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
-    public class Customer : Person
+    public class Customer : Person 
     {
         #region Enumeration
         /// <summary>
@@ -32,12 +32,13 @@ namespace PoppelOrderingSystem.BusinessLayer
         //need to define credit status here,the creditStatus data member of this class is of class type CreditStatus.
         private CreditStatus creditStatus;
 
-        private Collection<Address> addresses;
+        private Address address;
+        private Account account;
         #endregion
 
         #region Property Methods
         [DisplayName("Customer Number")]
-        [Required(ErrorMessage = "Customer number is required.")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Customer number is required.")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "Customer number must be between 5 and 20 characters")]
         public string CustomerNumber
         { 
@@ -57,10 +58,16 @@ namespace PoppelOrderingSystem.BusinessLayer
             set { creditStatus = value;  }
         }
 
-        public Collection<Address> AllAddresses
+        public Address Address
         {
-            get { return addresses;  }
-            set { addresses = value;  }
+            get { return address; }
+            set { address = value; }
+        }
+
+        public Account Account
+        {
+            get { return account; }
+            set { account = Account;  }
         }
         #endregion
 
