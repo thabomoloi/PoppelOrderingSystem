@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using PoppelOrderingSystem.BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,7 +103,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             ActivateButton(customersButton);
             HideAllSubmenu();
-            OpenChildForm(new CustomerForm());
+            OpenChildForm(new CustomerForm(new CustomerController(), new AccountHandler(), new AddressHandler()));
         }
 
         private void listCustomersButton_Click(object sender, EventArgs e)

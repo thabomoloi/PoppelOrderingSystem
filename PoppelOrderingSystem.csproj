@@ -69,10 +69,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Account.cs" />
+    <Compile Include="BusinessLayer\AccountHandler.cs" />
+    <Compile Include="BusinessLayer\Address.cs" />
+    <Compile Include="BusinessLayer\AddressHandler.cs" />
     <Compile Include="BusinessLayer\Customer.cs" />
     <Compile Include="BusinessLayer\CustomerController.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
     <Compile Include="BusinessLayer\Person.cs" />
+    <Compile Include="DatabaseLayer\AccountDB.cs" />
+    <Compile Include="DatabaseLayer\AddressDB.cs" />
     <Compile Include="DatabaseLayer\CustomerDB.cs" />
     <Compile Include="DatabaseLayer\DB.cs" />
     <Compile Include="PoppelDatabaseDataSet.Designer.cs">

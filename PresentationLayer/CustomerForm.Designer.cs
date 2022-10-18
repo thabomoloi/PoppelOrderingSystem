@@ -420,6 +420,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.provinceComboBox.Location = new System.Drawing.Point(115, 107);
             this.provinceComboBox.Name = "provinceComboBox";
             this.provinceComboBox.Size = new System.Drawing.Size(282, 29);
+            this.provinceComboBox.Sorted = true;
             this.provinceComboBox.TabIndex = 8;
             // 
             // postCodLabel
@@ -477,6 +478,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.submitButton.TabIndex = 3;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // panel13
             // 
