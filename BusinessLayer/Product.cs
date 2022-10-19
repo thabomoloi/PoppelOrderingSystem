@@ -26,7 +26,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         public string Barcode
         {
             get { return barcode; }
-            set { description = barcode; }
+            set { barcode= value; }
         }
         public string Supplier
         {

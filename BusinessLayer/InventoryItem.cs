@@ -27,7 +27,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         public int QuantityInStock
         {
             get { return qtyInStock; }
-            set { qtyOnHand = value; }
+            set { qtyInStock = value; }
         }
         public string ProductID
         {
