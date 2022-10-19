@@ -37,6 +37,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             get { return customers;  }
         }
         #endregion
+
         #region Constructor 
         /// <summary>
         /// Create new instance of customer database
