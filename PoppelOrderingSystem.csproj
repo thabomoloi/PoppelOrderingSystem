@@ -99,7 +99,9 @@
     <Compile Include="DatabaseLayer\DeliveryAddressDB.cs" />
     <Compile Include="DatabaseLayer\InventoryItemDB.cs" />
     <Compile Include="DatabaseLayer\OrderDB.cs" />
+    <Compile Include="DatabaseLayer\OrderItemDB.cs" />
     <Compile Include="DatabaseLayer\ProductDB.cs" />
+    <Compile Include="DatabaseLayer\UserAccountDB.cs" />
     <Compile Include="PoppelDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
