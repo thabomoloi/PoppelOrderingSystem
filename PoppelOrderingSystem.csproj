@@ -85,6 +85,7 @@
     <Compile Include="BusinessLayer\ProductHandler.cs" />
     <Compile Include="DatabaseLayer\AccountDB.cs" />
     <Compile Include="DatabaseLayer\AddressDB.cs" />
+    <Compile Include="DatabaseLayer\CatalogDB.cs" />
     <Compile Include="DatabaseLayer\CustomerDB.cs" />
     <Compile Include="DatabaseLayer\DB.cs" />
     <Compile Include="DatabaseLayer\InventoryItemDB.cs" />
