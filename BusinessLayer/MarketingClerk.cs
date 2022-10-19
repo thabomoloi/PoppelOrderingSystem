@@ -11,6 +11,7 @@ namespace PoppelOrderingSystem.BusinessLayer
 
         #region data members
         private string clerkID;
+        private int userId;
         #endregion
 
         #region Property Methods
@@ -19,9 +20,11 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return clerkID; }
             set { clerkID = value; }
         }
+        public int UserID
+        {
+            get { return userId; }
+            set { userId = value; }
+        }
         #endregion
     }
-
-
-
 }
