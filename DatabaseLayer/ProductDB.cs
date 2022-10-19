@@ -84,7 +84,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
                     // Instantiate a new Product object
                     aProd = new Product();
                     // Obtain each Product attribute from the specific field in the row in the table
-                    aProd.ProductID = Convert.ToString(myRow["ProductID"]);
+                    aProd.ProductID = Convert.ToString(myRow["ProductID"]).TrimEnd();
                     aProd.Description = Convert.ToString(myRow["Description"]).TrimEnd();
                     aProd.Barcode = Convert.ToString(myRow["Barcode"]).TrimEnd();
                     aProd.Supplier = Convert.ToString(myRow["Supplier"]).TrimEnd();
@@ -203,7 +203,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         }
         #endregion
 
-      #region Build update parameters
+        #region Build update parameters
         /// <summary>
         /// Builds update parameters
         /// </summary>
@@ -221,10 +221,6 @@ namespace PoppelOrderingSystem.DatabaseLayer
             daMain.UpdateCommand.Parameters.Add(param);
 
             param = new SqlParameter("@Supplier", SqlDbType.NVarChar, 50, "Supplier");
-            param.SourceVersion = DataRowVersion.Current;
-            daMain.UpdateCommand.Parameters.Add(param);
-
-            param = new SqlParameter("@PostalCode", SqlDbType.NVarChar, 4, "PostalCode");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
