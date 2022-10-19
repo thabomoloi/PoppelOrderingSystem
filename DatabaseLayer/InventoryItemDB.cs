@@ -209,7 +209,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             //---Create Parameters to communicate with SQL UPDATE
             SqlParameter param = default(SqlParameter);
 
-            param = new SqlParameter("@QuantityOnHand", SqlDbType.Int, 3, "QuantityOnHand");
+            param = new SqlParameter("@QuantityOnHand", SqlDbType.Int, 4, "QuantityOnHand");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 

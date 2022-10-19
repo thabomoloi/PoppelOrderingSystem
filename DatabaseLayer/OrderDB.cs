@@ -301,7 +301,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             daMain.UpdateCommand.Parameters.Add(param);
 
             //testing the ID of record that needs to change with the original ID of the record
-            param = new SqlParameter("@Original_ID", SqlDbType.NVarChar, 15, "OrderNumber");
+            param = new SqlParameter("@Original_ID", SqlDbType.Int, 4, "OrderNumber");
             param.SourceVersion = DataRowVersion.Original;
             daMain.UpdateCommand.Parameters.Add(param);
         }
