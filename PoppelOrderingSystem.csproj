@@ -90,6 +90,7 @@
     <Compile Include="BusinessLayer\Person.cs" />
     <Compile Include="BusinessLayer\Product.cs" />
     <Compile Include="BusinessLayer\ProductHandler.cs" />
+    <Compile Include="BusinessLayer\UserAccount.cs" />
     <Compile Include="DatabaseLayer\AccountDB.cs" />
     <Compile Include="DatabaseLayer\AddressDB.cs" />
     <Compile Include="DatabaseLayer\CatalogDB.cs" />
