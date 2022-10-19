@@ -108,7 +108,9 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         private void listCustomersButton_Click(object sender, EventArgs e)
         {
-
+            HideAllSubmenu();
+            ActivateButton(customersButton);
+            OpenChildForm(new CustomerListing());
         }
         #endregion
 

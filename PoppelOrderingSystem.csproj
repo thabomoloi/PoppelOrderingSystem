@@ -94,6 +94,12 @@
     <Compile Include="PresentationLayer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\CustomerListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CustomerListing.Designer.cs">
+      <DependentUpon>CustomerListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\MainWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CustomerListing.resx">
+      <DependentUpon>CustomerListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\MainWindowForm.resx">
       <DependentUpon>MainWindowForm.cs</DependentUpon>
