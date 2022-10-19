@@ -78,6 +78,7 @@
     <Compile Include="BusinessLayer\EntityValidator.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
     <Compile Include="BusinessLayer\Person.cs" />
+    <Compile Include="BusinessLayer\Product.cs" />
     <Compile Include="DatabaseLayer\AccountDB.cs" />
     <Compile Include="DatabaseLayer\AddressDB.cs" />
     <Compile Include="DatabaseLayer\CustomerDB.cs" />
