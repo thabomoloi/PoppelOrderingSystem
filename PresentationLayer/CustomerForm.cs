@@ -111,6 +111,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                 CustomerNumber = customer.CustomerNumber,
                 AvailableCredit = 1500,
                 Balance = 0,
+                IsOpen = true,
                 DateOpened = DateTime.Now
             };
 
