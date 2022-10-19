@@ -9,12 +9,12 @@ namespace PoppelOrderingSystem.BusinessLayer
     public class InventoryItem
     {
         #region Data Members
-        private string id, productID;
-        private int qtyOnHand, qtyInStock;
+        private string productID;
+        private int id, qtyOnHand, qtyInStock;
         #endregion
 
         #region Poperties
-        public string InventoryItemID
+        public int InventoryItemID
         {
             get { return id; }
             set { id = value; }
@@ -29,7 +29,7 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return qtyInStock; }
             set { qtyOnHand = value; }
         }
-        public string ProductId
+        public string ProductID
         {
             get { return productID; }
             set { productID = value; }
