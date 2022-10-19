@@ -86,5 +86,12 @@ namespace PoppelOrderingSystem.BusinessLayer
             set { customerNumber = value; }
         }
         #endregion
+
+        #region ToString 
+        public override string ToString()
+        {
+            return string.Join("\n", Street, Suburb, City, PostalCode, Province);
+        }
+        #endregion
     }
 }

@@ -21,7 +21,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #region Constrctors
         public Account()
         {
-
+            isOpen = true;
         }
         public Account(int accNo, String custNo, DateTime opened, DateTime closed, bool isOpen, double credit, double balanace)
         {
@@ -71,6 +71,16 @@ namespace PoppelOrderingSystem.BusinessLayer
         {
             get { return customerNumber; }
             set { customerNumber = value; }
+        }
+        #endregion
+
+        #region ToString
+        public override string ToString()
+        {
+            if (isOpen)
+                return "Open: " + DateOpened.ToString();
+            else
+                return "Closed: " + DateClosed.ToString();
         }
         #endregion
     }

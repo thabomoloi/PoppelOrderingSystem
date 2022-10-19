@@ -67,7 +67,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         public Account Account
         {
             get { return account; }
-            set { account = Account;  }
+            set { account = value;  }
         }
         #endregion
 

@@ -78,16 +78,14 @@ namespace PoppelOrderingSystem.BusinessLayer
         #region Search Methods
 
         #region Find By CustNo
-        public Collection<Address> FindByCustNo(Collection<Address> addrs, string custNo)
+        public Address FindByCustNo(Collection<Address> addrs, string custNo)
         {
-            Collection<Address> matches = new Collection<Address>();
-
             foreach (Address addr in addrs)
             {
                 if (addr.CustomerNumber == custNo)
-                    matches.Add(addr);
+                    return addr;
             }
-            return matches;
+            return null;
         }
         #endregion
 
