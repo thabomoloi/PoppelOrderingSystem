@@ -95,6 +95,7 @@
     <Compile Include="DatabaseLayer\AddressDB.cs" />
     <Compile Include="DatabaseLayer\CatalogDB.cs" />
     <Compile Include="DatabaseLayer\CatalogProductDB.cs" />
+    <Compile Include="DatabaseLayer\MarketingClerkDB.cs" />
     <Compile Include="DatabaseLayer\CustomerDB.cs" />
     <Compile Include="DatabaseLayer\DB.cs" />
     <Compile Include="DatabaseLayer\DeliveryAddressDB.cs" />
