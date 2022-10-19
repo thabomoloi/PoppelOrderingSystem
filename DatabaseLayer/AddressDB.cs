@@ -333,7 +333,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         /// Updates the data source
         /// </summary>
         /// <returns>true if successful update, else false</returns>
-        public bool UpdateDataSource()
+        public virtual bool UpdateDataSource()
         {
             Create_INSERT_Command();
             Create_UPDATE_Command();

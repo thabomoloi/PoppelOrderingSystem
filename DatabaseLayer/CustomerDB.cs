@@ -232,7 +232,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             param = new SqlParameter("@Phone", SqlDbType.NVarChar, 15, "Phone");
             daMain.InsertCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@Email", SqlDbType.NVarChar, 15, "Email");
+            param = new SqlParameter("@Email", SqlDbType.NVarChar, 50, "Email");
             daMain.InsertCommand.Parameters.Add(param);
 
             param = new SqlParameter("@CreditLimit", SqlDbType.Money, 8, "CreditLimit");
@@ -264,7 +264,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@Email", SqlDbType.NVarChar, 15, "Email");
+            param = new SqlParameter("@Email", SqlDbType.NVarChar, 50, "Email");
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
 
