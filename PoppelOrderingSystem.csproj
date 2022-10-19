@@ -76,6 +76,7 @@
     <Compile Include="BusinessLayer\Customer.cs" />
     <Compile Include="BusinessLayer\CustomerController.cs" />
     <Compile Include="BusinessLayer\EntityValidator.cs" />
+    <Compile Include="BusinessLayer\InventoryItem.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
     <Compile Include="BusinessLayer\Person.cs" />
     <Compile Include="BusinessLayer\Product.cs" />
