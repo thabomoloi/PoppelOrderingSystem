@@ -85,6 +85,7 @@
     <Compile Include="BusinessLayer\InventoryItem.cs" />
     <Compile Include="BusinessLayer\InventoryItemHandler.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
+    <Compile Include="BusinessLayer\MarketingClerkHandler.cs" />
     <Compile Include="BusinessLayer\Order.cs" />
     <Compile Include="BusinessLayer\OrderItem.cs" />
     <Compile Include="BusinessLayer\Person.cs" />
