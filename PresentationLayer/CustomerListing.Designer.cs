@@ -39,6 +39,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerDataGridView.Location = new System.Drawing.Point(12, 76);
             this.customerDataGridView.Name = "customerDataGridView";
+            this.customerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerDataGridView.Size = new System.Drawing.Size(776, 220);
             this.customerDataGridView.TabIndex = 0;
             // 
