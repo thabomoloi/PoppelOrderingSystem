@@ -53,6 +53,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.Controls.Add(this.dataGridView);
             this.Name = "OrderListForm";
             this.Text = "OrderListForm";
+            this.Load += new System.EventHandler(this.OrderListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
