@@ -26,7 +26,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #endregion
 
         #region Properties
-        public Collection<CatalogProduct> AllCatalogs
+        public Collection<CatalogProduct> AllCatalogProducts
         {
             get { return catalogProducts; }
         }

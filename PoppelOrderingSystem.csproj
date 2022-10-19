@@ -79,6 +79,8 @@
     <Compile Include="BusinessLayer\CatalogProductHandler.cs" />
     <Compile Include="BusinessLayer\Customer.cs" />
     <Compile Include="BusinessLayer\CustomerController.cs" />
+    <Compile Include="BusinessLayer\DeliveryAddress.cs" />
+    <Compile Include="BusinessLayer\DeliveryAddressHandler.cs" />
     <Compile Include="BusinessLayer\EntityValidator.cs" />
     <Compile Include="BusinessLayer\InventoryItem.cs" />
     <Compile Include="BusinessLayer\InventoryItemHandler.cs" />
@@ -92,12 +94,19 @@
     <Compile Include="DatabaseLayer\CatalogProductDB.cs" />
     <Compile Include="DatabaseLayer\CustomerDB.cs" />
     <Compile Include="DatabaseLayer\DB.cs" />
+    <Compile Include="DatabaseLayer\DeliveryAddressDB.cs" />
     <Compile Include="DatabaseLayer\InventoryItemDB.cs" />
     <Compile Include="DatabaseLayer\ProductDB.cs" />
     <Compile Include="PoppelDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PoppelDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\CatalogProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CatalogProductsForm.Designer.cs">
+      <DependentUpon>CatalogProductsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ColorsRGB.cs" />
     <Compile Include="PresentationLayer\CustomerForm.cs">
@@ -126,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\CatalogProductsForm.resx">
+      <DependentUpon>CatalogProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>

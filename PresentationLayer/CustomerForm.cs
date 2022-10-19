@@ -112,7 +112,8 @@ namespace PoppelOrderingSystem.PresentationLayer
                 AvailableCredit = 1500,
                 Balance = 0,
                 IsOpen = true,
-                DateOpened = DateTime.Now
+                DateOpened = DateTime.Now,
+                DateClosed = DateTime.MaxValue
             };
 
             bool validCustomer = ValidateInput(customer);

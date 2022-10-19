@@ -35,6 +35,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             ordersSubmenuPanel.Visible = false;
             customersSubmenuPanel.Visible = false;
+            productsSubmenuPanel.Visible = false;
         }
 
         private void ShowSubmenu(Panel submenuPanel)
@@ -127,8 +128,8 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         private void listCustomersButton_Click(object sender, EventArgs e)
         {
-            HideAllSubmenu();
             ActivateButton(customersButton);
+            HideAllSubmenu();
             OpenChildForm(new CustomerListing());
         }
         #endregion
@@ -141,13 +142,15 @@ namespace PoppelOrderingSystem.PresentationLayer
         #region Products submenu
         private void catalogProductsButton_Click(object sender, EventArgs e)
         {
-            
+            ActivateButton(productsButton);
+            HideAllSubmenu();
+            OpenChildForm(new CatalogProductsForm());
         }
 
         private void inventoryButton_Click(object sender, EventArgs e)
         {
-            HideAllSubmenu();
             ActivateButton(productsButton);
+            HideAllSubmenu();
             OpenChildForm(new InventoryForm());
         }
         #endregion

@@ -16,11 +16,11 @@ namespace PoppelOrderingSystem.DatabaseLayer
         /// <summary>
         /// Name of the table
         /// </summary>
-        private string table = "Catalogs";
+        private string table = "CatalogProducts";
         /// <summary>
         /// SQL Select query
         /// </summary>
-        private string sqlLocal = "SELECT * FROM Catalogs";
+        private string sqlLocal = "SELECT * FROM CatalogProducts";
         /// <summary>
         /// Collection of catalogs
         /// </summary>
@@ -28,7 +28,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
 
         #endregion
 
-        #region Get All Catalogs
+        #region Get All CatalogProducts
         /// <summary>
         /// Get all catalogs
         /// </summary>
