@@ -74,11 +74,14 @@
     <Compile Include="BusinessLayer\Address.cs" />
     <Compile Include="BusinessLayer\AddressHandler.cs" />
     <Compile Include="BusinessLayer\Catalog.cs" />
+    <Compile Include="BusinessLayer\CatalogHandler.cs" />
     <Compile Include="BusinessLayer\CatalogProduct.cs" />
+    <Compile Include="BusinessLayer\CatalogProductHandler.cs" />
     <Compile Include="BusinessLayer\Customer.cs" />
     <Compile Include="BusinessLayer\CustomerController.cs" />
     <Compile Include="BusinessLayer\EntityValidator.cs" />
     <Compile Include="BusinessLayer\InventoryItem.cs" />
+    <Compile Include="BusinessLayer\InventoryItemHandler.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
     <Compile Include="BusinessLayer\Person.cs" />
     <Compile Include="BusinessLayer\Product.cs" />
