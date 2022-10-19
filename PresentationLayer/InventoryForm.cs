@@ -23,6 +23,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             public string InventoryItemID { get; set; }
             public string QuantityOnHand { get; set; }
             public string QuantityInStock { get; set; }
+            public string ReservedItems { get; set; }
         }
 
         private ProductHandler productHandler;
@@ -39,9 +40,11 @@ namespace PoppelOrderingSystem.PresentationLayer
             Items = inventoryItemHandler.AllInventoryItems;
             Products = productHandler.AllProducts;
 
+            InventoryDataViews = new Collection<InventoryDataView>();
+
             InitializeComponent();
         }
-        private Collection<InventoryDataView> InventoryDataViews { get; set; }
+        private Collection<InventoryDataView> InventoryDataViews;
         private void InventoryForm_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < Items.Count; i++)
@@ -57,11 +60,13 @@ namespace PoppelOrderingSystem.PresentationLayer
                     Supplier = prod.Supplier,
                     InventoryItemID = item.InventoryItemID.ToString(),
                     QuantityOnHand = item.QuantityOnHand.ToString(),
-                    QuantityInStock = item.QuantityInStock.ToString()
+                    QuantityInStock = item.QuantityInStock.ToString(),
+                    ReservedItems = (item.QuantityOnHand - item.QuantityInStock).ToString()
                 };
                 InventoryDataViews.Add(inventoryDataView);
             }
             dataGridView.DataSource = InventoryDataViews;
+            dataGridView.Columns["InventoryItemID"].Visible = false;
         }
     }
 }

@@ -68,6 +68,25 @@ namespace PoppelOrderingSystem.PresentationLayer
         }
         #endregion
 
+        #region Child Form Handler
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeChildForm != null)
+                activeChildForm.Close();
+
+            activeChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            childFormPanel.Controls.Add(childForm);
+            childFormPanel.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        #endregion
+
         #region Sidemenu buttons click events
         private void dashboardButton_Click(object sender, EventArgs e)
         {
@@ -117,9 +136,21 @@ namespace PoppelOrderingSystem.PresentationLayer
         private void productsButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
-            ActivateButton(sender);
+            ShowSubmenu(productsSubmenuPanel);
+        }
+        #region Products submenu
+        private void catalogProductsButton_Click(object sender, EventArgs e)
+        {
+            
         }
 
+        private void inventoryButton_Click(object sender, EventArgs e)
+        {
+            HideAllSubmenu();
+            ActivateButton(productsButton);
+            OpenChildForm(new InventoryForm());
+        }
+        #endregion
         private void reportButton_Click(object sender, EventArgs e)
         {
             HideAllSubmenu();
@@ -133,23 +164,8 @@ namespace PoppelOrderingSystem.PresentationLayer
         }
         #endregion
 
-        #region Child Form Handler
-        private void OpenChildForm(Form childForm)
-        {
-            if (activeChildForm != null)
-                activeChildForm.Close();
+        
 
-            activeChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-
-            childFormPanel.Controls.Add(childForm);
-            childFormPanel.Tag = childForm;
-
-            childForm.BringToFront();
-            childForm.Show();
-        }
-        #endregion
+        
     }
 }
