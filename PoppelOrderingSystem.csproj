@@ -132,6 +132,12 @@
     <Compile Include="PresentationLayer\CustomerListing.Designer.cs">
       <DependentUpon>CustomerListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\EnterCustomerNumberDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\EnterCustomerNumberDialog.Designer.cs">
+      <DependentUpon>EnterCustomerNumberDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\CustomerListing.resx">
       <DependentUpon>CustomerListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\EnterCustomerNumberDialog.resx">
+      <DependentUpon>EnterCustomerNumberDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
