@@ -46,11 +46,11 @@ namespace PoppelOrderingSystem.PresentationLayer
                 {
                     MessageBox.Show("Please enter a valid customer number.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
+                } else
+                {
+                    this.DialogResult = DialogResult.OK;
                 }
             }
-            
-            this.DialogResult = DialogResult.OK;
-
         }
     }
 }
