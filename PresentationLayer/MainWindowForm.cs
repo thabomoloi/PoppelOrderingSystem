@@ -95,23 +95,28 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             HideAllSubmenu();
             ActivateButton(sender);
+            headerTitle.Text = ((IconButton)sender).Text;
+            homePanel.BringToFront();
         }
 
         private void ordersButton_Click(object sender, EventArgs e)
         {
             ShowSubmenu(ordersSubmenuPanel);
-            ActivateButton(sender);
         }
 
         #region Order Submenu
         private void newOrderButton_Click(object sender, EventArgs e)
         {
-
+            headerTitle.Text = newOrderButton.Text;
+            HideAllSubmenu();
+            ActivateButton(ordersButton);
         }
 
         private void listOrdersButton_Click(object sender, EventArgs e)
         {
-
+            headerTitle.Text = listOrdersButton.Text;
+            HideAllSubmenu();
+            ActivateButton(ordersButton);
         }
         #endregion 
 
@@ -123,6 +128,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         #region Customers Submenu
         private void addCustomerButton_Click(object sender, EventArgs e)
         {
+            headerTitle.Text = ((IconButton)sender).Text;
             ActivateButton(customersButton);
             HideAllSubmenu();
             OpenChildForm(new CustomerForm(new CustomerController(), new AccountHandler(), new AddressHandler()));
@@ -130,6 +136,7 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         private void listCustomersButton_Click(object sender, EventArgs e)
         {
+            headerTitle.Text = ((IconButton)sender).Text;
             ActivateButton(customersButton);
             HideAllSubmenu();
             OpenChildForm(new CustomerListing());
@@ -138,12 +145,12 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         private void productsButton_Click(object sender, EventArgs e)
         {
-            HideAllSubmenu();
             ShowSubmenu(productsSubmenuPanel);
         }
         #region Products submenu
         private void catalogProductsButton_Click(object sender, EventArgs e)
         {
+            headerTitle.Text = ((IconButton)sender).Text;
             ActivateButton(productsButton);
             HideAllSubmenu();
             OpenChildForm(new CatalogProductsForm());
@@ -151,6 +158,7 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         private void inventoryButton_Click(object sender, EventArgs e)
         {
+            headerTitle.Text = ((IconButton)sender).Text;
             ActivateButton(productsButton);
             HideAllSubmenu();
             OpenChildForm(new InventoryForm());
@@ -158,6 +166,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         #endregion
         private void reportButton_Click(object sender, EventArgs e)
         {
+            headerTitle.Text = ((IconButton)sender).Text;
             HideAllSubmenu();
             ActivateButton(sender);
         }
@@ -182,7 +191,10 @@ namespace PoppelOrderingSystem.PresentationLayer
                     this.Close();
 
                 if (dialogResult == DialogResult.OK)
+                {
+                    username.Text = LoginForm.username;
                     this.Show();
+                }
             }
         }
     }

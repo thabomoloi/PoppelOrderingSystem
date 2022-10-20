@@ -15,7 +15,7 @@ namespace PoppelOrderingSystem.PresentationLayer
     {
         private UserAccountHandler userAccountHandler;
         private MarketingClerkHandler clerkHandler;
-
+        public static string username;
         public LoginForm()
         {
             userAccountHandler = new UserAccountHandler();
@@ -56,6 +56,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                     if (passwordTextbox.Text.Trim() == user.Password)
                     {
                         this.DialogResult = DialogResult.OK;
+                        username = marketingClerk.FirstName;
                         this.Close();
                     }
                     else
