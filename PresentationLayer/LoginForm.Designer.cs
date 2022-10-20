@@ -37,7 +37,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.usrnameTextbox = new System.Windows.Forms.TextBox();
+            this.usernameTextbox = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -147,7 +147,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.usrnameTextbox);
+            this.panel2.Controls.Add(this.usernameTextbox);
             this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(25, 0);
@@ -155,15 +155,15 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.panel2.Size = new System.Drawing.Size(350, 28);
             this.panel2.TabIndex = 0;
             // 
-            // usrnameTextbox
+            // usernameTextbox
             // 
-            this.usrnameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usrnameTextbox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.usrnameTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usrnameTextbox.Location = new System.Drawing.Point(32, 0);
-            this.usrnameTextbox.Name = "usrnameTextbox";
-            this.usrnameTextbox.Size = new System.Drawing.Size(318, 22);
-            this.usrnameTextbox.TabIndex = 2;
+            this.usernameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usernameTextbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.usernameTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextbox.Location = new System.Drawing.Point(32, 0);
+            this.usernameTextbox.Name = "usernameTextbox";
+            this.usernameTextbox.Size = new System.Drawing.Size(318, 22);
+            this.usernameTextbox.TabIndex = 2;
             // 
             // iconPictureBox1
             // 
@@ -339,7 +339,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox usrnameTextbox;
+        private System.Windows.Forms.TextBox usernameTextbox;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;

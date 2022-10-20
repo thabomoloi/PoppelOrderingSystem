@@ -180,6 +180,9 @@ namespace PoppelOrderingSystem.PresentationLayer
                 var dialogResult = loginForm.ShowDialog();
                 if (dialogResult == DialogResult.Cancel)
                     this.Close();
+
+                if (dialogResult == DialogResult.OK)
+                    this.Show();
             }
         }
     }
