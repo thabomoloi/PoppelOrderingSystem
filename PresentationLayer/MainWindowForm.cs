@@ -17,11 +17,13 @@ namespace PoppelOrderingSystem.PresentationLayer
         #region Fields
         private IconButton activeButton;
         private Form activeChildForm;
+        private LoginForm login;
         #endregion
 
         #region Constructor
         public MainWindowForm()
         {
+            login = new LoginForm();
             InitializeComponent();
             //  Hide all submenus by default
             HideAllSubmenu();
@@ -165,10 +167,20 @@ namespace PoppelOrderingSystem.PresentationLayer
             HideAllSubmenu();
             ActivateButton(sender);
         }
+
+
+
         #endregion
 
-        
-
-        
+        private void MainWindowForm_Load(object sender, EventArgs e)
+        {
+            using (LoginForm loginForm = new LoginForm())
+            {
+                this.Hide();
+                var dialogResult = loginForm.ShowDialog();
+                if (dialogResult == DialogResult.Cancel)
+                    this.Close();
+            }
+        }
     }
 }

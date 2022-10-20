@@ -30,6 +30,12 @@ namespace PoppelOrderingSystem.PresentationLayer
         private void InitializeComponent()
         {
             this.sidemenuPanel = new System.Windows.Forms.Panel();
+            this.logoutButton = new FontAwesome.Sharp.IconButton();
+            this.spacingPanel = new System.Windows.Forms.Panel();
+            this.reportButton = new FontAwesome.Sharp.IconButton();
+            this.productsSubmenuPanel = new System.Windows.Forms.Panel();
+            this.inventoryButton = new FontAwesome.Sharp.IconButton();
+            this.catalogProductsButton = new FontAwesome.Sharp.IconButton();
             this.productsButton = new FontAwesome.Sharp.IconButton();
             this.customersSubmenuPanel = new System.Windows.Forms.Panel();
             this.listCustomersButton = new FontAwesome.Sharp.IconButton();
@@ -45,17 +51,11 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.childFormPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerTitle = new System.Windows.Forms.Label();
-            this.productsSubmenuPanel = new System.Windows.Forms.Panel();
-            this.inventoryButton = new FontAwesome.Sharp.IconButton();
-            this.catalogProductsButton = new FontAwesome.Sharp.IconButton();
-            this.logoutButton = new FontAwesome.Sharp.IconButton();
-            this.spacingPanel = new System.Windows.Forms.Panel();
-            this.reportButton = new FontAwesome.Sharp.IconButton();
             this.sidemenuPanel.SuspendLayout();
+            this.productsSubmenuPanel.SuspendLayout();
             this.customersSubmenuPanel.SuspendLayout();
             this.ordersSubmenuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
-            this.productsSubmenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidemenuPanel
@@ -78,6 +78,115 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.sidemenuPanel.Name = "sidemenuPanel";
             this.sidemenuPanel.Size = new System.Drawing.Size(230, 676);
             this.sidemenuPanel.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOut;
+            this.logoutButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.logoutButton.IconSize = 32;
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(0, 674);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.logoutButton.Size = new System.Drawing.Size(213, 50);
+            this.logoutButton.TabIndex = 14;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logoutButton.UseVisualStyleBackColor = true;
+            // 
+            // spacingPanel
+            // 
+            this.spacingPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.spacingPanel.Location = new System.Drawing.Point(0, 620);
+            this.spacingPanel.Name = "spacingPanel";
+            this.spacingPanel.Size = new System.Drawing.Size(213, 54);
+            this.spacingPanel.TabIndex = 13;
+            // 
+            // reportButton
+            // 
+            this.reportButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reportButton.FlatAppearance.BorderSize = 0;
+            this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.reportButton.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.reportButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.reportButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.reportButton.IconSize = 32;
+            this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportButton.Location = new System.Drawing.Point(0, 570);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.reportButton.Size = new System.Drawing.Size(213, 50);
+            this.reportButton.TabIndex = 12;
+            this.reportButton.Text = "Report";
+            this.reportButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportButton.UseVisualStyleBackColor = true;
+            // 
+            // productsSubmenuPanel
+            // 
+            this.productsSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(70)))));
+            this.productsSubmenuPanel.Controls.Add(this.inventoryButton);
+            this.productsSubmenuPanel.Controls.Add(this.catalogProductsButton);
+            this.productsSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productsSubmenuPanel.Location = new System.Drawing.Point(0, 480);
+            this.productsSubmenuPanel.Name = "productsSubmenuPanel";
+            this.productsSubmenuPanel.Size = new System.Drawing.Size(213, 90);
+            this.productsSubmenuPanel.TabIndex = 11;
+            // 
+            // inventoryButton
+            // 
+            this.inventoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inventoryButton.FlatAppearance.BorderSize = 0;
+            this.inventoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventoryButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.inventoryButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.inventoryButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.inventoryButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.inventoryButton.IconSize = 24;
+            this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inventoryButton.Location = new System.Drawing.Point(0, 45);
+            this.inventoryButton.Name = "inventoryButton";
+            this.inventoryButton.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.inventoryButton.Size = new System.Drawing.Size(213, 45);
+            this.inventoryButton.TabIndex = 7;
+            this.inventoryButton.Text = "Inventory";
+            this.inventoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inventoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.inventoryButton.UseVisualStyleBackColor = true;
+            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
+            // 
+            // catalogProductsButton
+            // 
+            this.catalogProductsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.catalogProductsButton.FlatAppearance.BorderSize = 0;
+            this.catalogProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.catalogProductsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catalogProductsButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.catalogProductsButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.catalogProductsButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.catalogProductsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.catalogProductsButton.IconSize = 24;
+            this.catalogProductsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.catalogProductsButton.Location = new System.Drawing.Point(0, 0);
+            this.catalogProductsButton.Name = "catalogProductsButton";
+            this.catalogProductsButton.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.catalogProductsButton.Size = new System.Drawing.Size(213, 45);
+            this.catalogProductsButton.TabIndex = 6;
+            this.catalogProductsButton.Text = "Catalog Products";
+            this.catalogProductsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.catalogProductsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.catalogProductsButton.UseVisualStyleBackColor = true;
+            this.catalogProductsButton.Click += new System.EventHandler(this.catalogProductsButton_Click);
             // 
             // productsButton
             // 
@@ -335,115 +444,6 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.headerTitle.Text = "Dashboard";
             this.headerTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // productsSubmenuPanel
-            // 
-            this.productsSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(70)))));
-            this.productsSubmenuPanel.Controls.Add(this.inventoryButton);
-            this.productsSubmenuPanel.Controls.Add(this.catalogProductsButton);
-            this.productsSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsSubmenuPanel.Location = new System.Drawing.Point(0, 480);
-            this.productsSubmenuPanel.Name = "productsSubmenuPanel";
-            this.productsSubmenuPanel.Size = new System.Drawing.Size(213, 90);
-            this.productsSubmenuPanel.TabIndex = 11;
-            // 
-            // inventoryButton
-            // 
-            this.inventoryButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inventoryButton.FlatAppearance.BorderSize = 0;
-            this.inventoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.inventoryButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.inventoryButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.inventoryButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.inventoryButton.IconSize = 24;
-            this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inventoryButton.Location = new System.Drawing.Point(0, 45);
-            this.inventoryButton.Name = "inventoryButton";
-            this.inventoryButton.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.inventoryButton.Size = new System.Drawing.Size(213, 45);
-            this.inventoryButton.TabIndex = 7;
-            this.inventoryButton.Text = "Inventory";
-            this.inventoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inventoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.inventoryButton.UseVisualStyleBackColor = true;
-            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
-            // 
-            // catalogProductsButton
-            // 
-            this.catalogProductsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.catalogProductsButton.FlatAppearance.BorderSize = 0;
-            this.catalogProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.catalogProductsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.catalogProductsButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.catalogProductsButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.catalogProductsButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.catalogProductsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.catalogProductsButton.IconSize = 24;
-            this.catalogProductsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.catalogProductsButton.Location = new System.Drawing.Point(0, 0);
-            this.catalogProductsButton.Name = "catalogProductsButton";
-            this.catalogProductsButton.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.catalogProductsButton.Size = new System.Drawing.Size(213, 45);
-            this.catalogProductsButton.TabIndex = 6;
-            this.catalogProductsButton.Text = "Catalog Products";
-            this.catalogProductsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.catalogProductsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.catalogProductsButton.UseVisualStyleBackColor = true;
-            this.catalogProductsButton.Click += new System.EventHandler(this.catalogProductsButton_Click);
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoutButton.FlatAppearance.BorderSize = 0;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.logoutButton.IconChar = FontAwesome.Sharp.IconChar.SignOut;
-            this.logoutButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.logoutButton.IconSize = 32;
-            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(0, 674);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.logoutButton.Size = new System.Drawing.Size(213, 50);
-            this.logoutButton.TabIndex = 14;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logoutButton.UseVisualStyleBackColor = true;
-            // 
-            // spacingPanel
-            // 
-            this.spacingPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacingPanel.Location = new System.Drawing.Point(0, 620);
-            this.spacingPanel.Name = "spacingPanel";
-            this.spacingPanel.Size = new System.Drawing.Size(213, 54);
-            this.spacingPanel.TabIndex = 13;
-            // 
-            // reportButton
-            // 
-            this.reportButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reportButton.FlatAppearance.BorderSize = 0;
-            this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.reportButton.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.reportButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.reportButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.reportButton.IconSize = 32;
-            this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportButton.Location = new System.Drawing.Point(0, 570);
-            this.reportButton.Name = "reportButton";
-            this.reportButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.reportButton.Size = new System.Drawing.Size(213, 50);
-            this.reportButton.TabIndex = 12;
-            this.reportButton.Text = "Report";
-            this.reportButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.reportButton.UseVisualStyleBackColor = true;
-            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,12 +455,13 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.Controls.Add(this.sidemenuPanel);
             this.Name = "MainWindowForm";
             this.Text = "MainWindowForm";
+            this.Load += new System.EventHandler(this.MainWindowForm_Load);
             this.sidemenuPanel.ResumeLayout(false);
+            this.productsSubmenuPanel.ResumeLayout(false);
             this.customersSubmenuPanel.ResumeLayout(false);
             this.ordersSubmenuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            this.productsSubmenuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

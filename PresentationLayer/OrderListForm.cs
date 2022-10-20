@@ -14,6 +14,7 @@ namespace PoppelOrderingSystem.PresentationLayer
 {
     public partial class OrderListForm : Form
     {
+        
         private class OrderDataView
         {
             public string OrderNumber { get; set; }
@@ -49,7 +50,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             for (int i = 0; i < Items.Count; i++)
             {
                 InventoryItem item = Items[i];
-                Product prod = productHandler.Find(item.OrderNumber);
+                /*Product prod = productHandler.Find(item.OrderNumber);
 
                 OrderDataView inventoryDataView = new OrderDataView
                 {
@@ -62,7 +63,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                     ClerkID = item.ClerkID.ToString(),
                     ReservedItems = (item.CustomerNumber - item.ClerkID).ToString()
                 };
-                OrderDataViews.Add(inventoryDataView);
+                OrderDataViews.Add(inventoryDataView);*/
             }
             dataGridView.DataSource = OrderDataViews;
             dataGridView.Columns["Total"].Visible = false;
