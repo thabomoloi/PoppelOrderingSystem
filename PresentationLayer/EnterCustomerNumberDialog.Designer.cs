@@ -79,7 +79,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.newOrderButton.Name = "newOrderButton";
             this.newOrderButton.Size = new System.Drawing.Size(150, 40);
             this.newOrderButton.TabIndex = 2;
-            this.newOrderButton.Text = "Start Order";
+            this.newOrderButton.Text = "OK";
             this.newOrderButton.UseVisualStyleBackColor = false;
             this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
@@ -159,7 +159,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EnterCustomerNumberDialog";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EnterCustomerNumberDialog";
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

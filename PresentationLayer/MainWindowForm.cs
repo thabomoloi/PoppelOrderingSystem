@@ -120,9 +120,26 @@ namespace PoppelOrderingSystem.PresentationLayer
                 {
                     customerNumber = EnterCustomerNumberDialog.customerNumber;
                     clerkID = LoginForm.clerkID;
-                    OpenChildForm(new OrderForm(customerNumber, clerkID));
-                    headerTitle.Text = newOrderButton.Text;
-                    ActivateButton(ordersButton);
+
+                    CustomerController customerController = new CustomerController();
+                    AddressHandler addressHandler = new AddressHandler();
+                    AccountHandler accountHandler = new AccountHandler();
+
+                    Customer cust = customerController.Find(customerNumber);
+                    cust.Address = addressHandler.FindByCustNo(addressHandler.AllAddresses, customerNumber);
+                    cust.Account = accountHandler.FindByCustNo(accountHandler.AllAccounts, customerNumber);
+                    
+                    using (CustomerDetails dialog2 = new CustomerDetails(cust))
+                    {
+                        var dialogResult2 = dialog2.ShowDialog();
+
+                        if (dialogResult2 == DialogResult.OK)
+                        {
+                            OpenChildForm(new OrderForm(customerNumber, clerkID));
+                            headerTitle.Text = newOrderButton.Text;
+                            ActivateButton(ordersButton);
+                        }
+                    }
                 }
             }
         }
@@ -215,7 +232,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             using (LoginForm loginForm = new LoginForm())
             {
-                this.Hide();
+                /*is.Hide();
                 var dialogResult = loginForm.ShowDialog();
                 if (dialogResult == DialogResult.Cancel)
                     this.Close();
@@ -224,7 +241,9 @@ namespace PoppelOrderingSystem.PresentationLayer
                 {
                     username.Text = LoginForm.username;
                     this.Show();
-                }
+                }*/
+                LoginForm.username = "Vincent";
+                LoginForm.clerkID = "ST127832";
             }
         }
     }

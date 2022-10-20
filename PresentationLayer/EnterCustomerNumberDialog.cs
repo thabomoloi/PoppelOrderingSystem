@@ -48,6 +48,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                     return;
                 } else
                 {
+                    customerNumber = cust.CustomerNumber;
                     this.DialogResult = DialogResult.OK;
                 }
             }
