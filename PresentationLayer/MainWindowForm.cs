@@ -110,6 +110,20 @@ namespace PoppelOrderingSystem.PresentationLayer
             headerTitle.Text = newOrderButton.Text;
             HideAllSubmenu();
             ActivateButton(ordersButton);
+            string customerNumber;
+            using (EnterCustomerNumberDialog dialog = new EnterCustomerNumberDialog())
+            {
+                this.Hide();
+                var dialogResult = dialog.ShowDialog();
+                if (dialogResult == DialogResult.Cancel)
+                    this.Close();
+
+                if (dialogResult == DialogResult.OK)
+                {
+                    customerNumber = EnterCustomerNumberDialog.customerNumber;
+                    this.Show();
+                }
+            }
         }
 
         private void listOrdersButton_Click(object sender, EventArgs e)
