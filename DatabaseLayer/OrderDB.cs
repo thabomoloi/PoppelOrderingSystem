@@ -92,7 +92,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
                     anOrd.ClerkID = Convert.ToString(myRow["ClerkID"]).TrimEnd();
 
                     // Credit Status
-                    switch (Convert.ToString(myRow["OrderStatus"]).TrimEnd())
+                    switch (Convert.ToString(myRow["Status"]).TrimEnd())
                     {
                         case "New":
                             anOrd.Status = Order.OrderStatus.New;
@@ -145,25 +145,25 @@ namespace PoppelOrderingSystem.DatabaseLayer
             switch (anOrd.Status)
             {
                 case Order.OrderStatus.OnHold:
-                    aRow["OrderStatus"] = "OnHold";
+                    aRow["Status"] = "OnHold";
                     break;
                 case Order.OrderStatus.New:
-                    aRow["OrderStatus"] = "New";
+                    aRow["Status"] = "New";
                     break;
                 case Order.OrderStatus.Confirmed:
-                    aRow["OrderStatus"] = "Confirmed";
+                    aRow["Status"] = "Confirmed";
                     break;
                 case Order.OrderStatus.Cancelled:
-                    aRow["OrderStatus"] = "Cancelled";
+                    aRow["Status"] = "Cancelled";
                     break;
                 case Order.OrderStatus.Shipped:
-                    aRow["OrderStatus"] = "Shipped";
+                    aRow["Status"] = "Shipped";
                     break;
                 case Order.OrderStatus.Delivered:
-                    aRow["OrderStatus"] = "Delivered";
+                    aRow["Status"] = "Delivered";
                     break;
                 case Order.OrderStatus.Closed:
-                    aRow["OrderStatus"] = "Closed";
+                    aRow["Status"] = "Closed";
                     break;
             }
         }
@@ -262,7 +262,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
             param = new SqlParameter("@ClerkID", SqlDbType.NVarChar, 15, "ClerkID");
             daMain.InsertCommand.Parameters.Add(param);
 
-            param = new SqlParameter("@OrderStatus", SqlDbType.NVarChar, 15, "OrderStatus");
+            param = new SqlParameter("@Status", SqlDbType.NVarChar, 15, "Status");
             daMain.InsertCommand.Parameters.Add(param);
         }
         #endregion
