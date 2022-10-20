@@ -555,12 +555,12 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             this.headerTitle.AutoSize = true;
             this.headerTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.headerTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerTitle.ForeColor = System.Drawing.Color.Gainsboro;
             this.headerTitle.Location = new System.Drawing.Point(0, 0);
             this.headerTitle.Name = "headerTitle";
             this.headerTitle.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.headerTitle.Size = new System.Drawing.Size(126, 45);
+            this.headerTitle.Size = new System.Drawing.Size(110, 37);
             this.headerTitle.TabIndex = 0;
             this.headerTitle.Text = "Home";
             this.headerTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

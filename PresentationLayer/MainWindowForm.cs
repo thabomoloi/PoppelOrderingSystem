@@ -117,6 +117,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             headerTitle.Text = listOrdersButton.Text;
             HideAllSubmenu();
             ActivateButton(ordersButton);
+            OpenChildForm(new OrderListForm());
         }
         #endregion 
 
@@ -175,6 +176,21 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             HideAllSubmenu();
             ActivateButton(sender);
+            this.Hide();
+
+            using (LoginForm loginForm = new LoginForm())
+            {
+                this.Hide();
+                var dialogResult = loginForm.ShowDialog();
+                if (dialogResult == DialogResult.Cancel)
+                    this.Close();
+
+                if (dialogResult == DialogResult.OK)
+                {
+                    username.Text = LoginForm.username;
+                    this.Show();
+                }
+            }
         }
 
 

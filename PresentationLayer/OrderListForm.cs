@@ -45,7 +45,7 @@ namespace PoppelOrderingSystem.PresentationLayer
 
                 OrderDataView view = new OrderDataView
                 {
-                    OrderNumber = order.OrderNumber.ToString().PadLeft(5, '0'),
+                    OrderNumber = order.OrderNumber.ToString(),
                     OrderDate = order.OrderDate.ToString(),
                     DeliveryDate = order.DeliveryDate.ToString(),
                     Status = order.Status.ToString(),
