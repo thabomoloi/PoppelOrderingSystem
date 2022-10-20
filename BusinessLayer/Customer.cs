@@ -72,7 +72,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         #endregion
 
         #region Constructors
-
+        public Customer() { }
         public Customer(double custCreditLimit, CreditStatus custCreditStatus)
         {
             creditLimit = custCreditLimit;
