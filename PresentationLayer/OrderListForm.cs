@@ -26,44 +26,34 @@ namespace PoppelOrderingSystem.PresentationLayer
             public string ClerkID { get; set; }
         }
 
-        private ProductHandler productHandler;
-        private InventoryItemHandler inventoryItemHandler;
-
-        private Collection<InventoryItem> Items { get; set; }
-        private Collection<Product> Products { get; set; }
+        private OrderHandler orderHandler;
+        private Collection<Order> Orders { get; set; }
         private Collection<OrderDataView> OrderDataViews;
         public OrderListForm()
         {
-            productHandler = new ProductHandler();
-            inventoryItemHandler = new InventoryItemHandler();
-
-            Items = inventoryItemHandler.AllInventoryItems;
-            Products = productHandler.AllProducts;
-
+            orderHandler = new OrderHandler();
+            Orders = orderHandler.AllOrders;
             OrderDataViews = new Collection<OrderDataView>();
-
             InitializeComponent();
         }
 
         private void OrderListForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < Items.Count; i++)
+            for (int i = 0; i < Orders.Count; i++)
             {
-                InventoryItem item = Items[i];
-                /*Product prod = productHandler.Find(item.OrderNumber);
+                Order order = Orders[i];
 
-                OrderDataView inventoryDataView = new OrderDataView
+                OrderDataView view = new OrderDataView
                 {
-                    OrderNumber = prod.OrderNumber,
-                    OrderDate = prod.OrderDate,
-                    Status = prod.Status,
-                    DeliveryDate = prod.DeliveryDate,
-                    Total = item.Total.ToString(),
-                    CustomerNumber = item.CustomerNumber.ToString(),
-                    ClerkID = item.ClerkID.ToString(),
-                    ReservedItems = (item.CustomerNumber - item.ClerkID).ToString()
+                    OrderNumber = order.OrderNumber.ToString().PadLeft(5, '0'),
+                    OrderDate = order.OrderDate.ToString(),
+                    DeliveryDate = order.DeliveryDate.ToString(),
+                    Status = order.Status.ToString(),
+                    Total = order.Total.ToString(),
+                    CustomerNumber = order.CustomerNumber,
+                    ClerkID = order.ClerkID
                 };
-                OrderDataViews.Add(inventoryDataView);*/
+                OrderDataViews.Add(view);
             }
             dataGridView.DataSource = OrderDataViews;
             dataGridView.Columns["Total"].Visible = false;
