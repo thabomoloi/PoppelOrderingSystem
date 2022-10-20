@@ -121,6 +121,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.cancelButton.TabIndex = 0;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // panel5
             // 
@@ -143,6 +144,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             this.newOrderButton.TabIndex = 2;
             this.newOrderButton.Text = "Start Order";
             this.newOrderButton.UseVisualStyleBackColor = false;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // EnterCustomerNumberDialog
             // 
