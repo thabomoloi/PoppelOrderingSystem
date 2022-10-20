@@ -112,7 +112,7 @@ namespace PoppelOrderingSystem.BusinessLayer
                 index += 1;
                 found = (aCat.CatalogID == catalogs[index].CatalogID);
             }
-            return index;
+            return found ? index : -1;
         }
         #endregion
 

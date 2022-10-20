@@ -124,7 +124,7 @@ namespace PoppelOrderingSystem.BusinessLayer
                 index += 1;
                 found = (anInv.InventoryItemID == inventoryItems[index].InventoryItemID);
             }
-            return index;
+            return found ? index : -1;
         }
         #endregion
 

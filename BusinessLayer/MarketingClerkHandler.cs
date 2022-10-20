@@ -124,7 +124,7 @@ namespace PoppelOrderingSystem.BusinessLayer
                 index += 1;
                 found = (clerk.ClerkID == marketingClerks[index].ClerkID);
             }
-            return index;
+            return found ? index : -1;
         }
         #endregion
 

@@ -148,7 +148,7 @@ namespace PoppelOrderingSystem.BusinessLayer
                 index += 1;
                 found = (aCust.CustomerNumber == customers[index].CustomerNumber);
             }
-            return index;
+            return found ? index : -1;
         }
         #endregion
 

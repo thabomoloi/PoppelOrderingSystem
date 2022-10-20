@@ -124,7 +124,7 @@ namespace PoppelOrderingSystem.BusinessLayer
                 index += 1;
                 found = (anAddr.AddressID == addresses[index].AddressID);
             }
-            return index;
+            return found ? index : -1;
         }
         #endregion
 
