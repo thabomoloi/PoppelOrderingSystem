@@ -106,22 +106,23 @@ namespace PoppelOrderingSystem.PresentationLayer
 
         #region Order Submenu
         private void newOrderButton_Click(object sender, EventArgs e)
-        {
-            headerTitle.Text = newOrderButton.Text;
+        {   
             HideAllSubmenu();
-            ActivateButton(ordersButton);
+            
             string customerNumber;
+            string clerkID;
+
             using (EnterCustomerNumberDialog dialog = new EnterCustomerNumberDialog())
             {
-                this.Hide();
-                var dialogResult = dialog.ShowDialog();
-                if (dialogResult == DialogResult.Cancel)
-                    this.Close();
 
+                var dialogResult = dialog.ShowDialog();
                 if (dialogResult == DialogResult.OK)
                 {
                     customerNumber = EnterCustomerNumberDialog.customerNumber;
-                    this.Show();
+                    clerkID = LoginForm.clerkID;
+                    OpenChildForm(new OrderForm(customerNumber, clerkID));
+                    headerTitle.Text = newOrderButton.Text;
+                    ActivateButton(ordersButton);
                 }
             }
         }
@@ -190,7 +191,6 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             HideAllSubmenu();
             ActivateButton(sender);
-            this.Hide();
 
             using (LoginForm loginForm = new LoginForm())
             {
