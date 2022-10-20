@@ -16,6 +16,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         private UserAccountHandler userAccountHandler;
         private MarketingClerkHandler clerkHandler;
         public static string username;
+        public static string clerkID;
         public LoginForm()
         {
             userAccountHandler = new UserAccountHandler();
@@ -57,6 +58,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                     {
                         this.DialogResult = DialogResult.OK;
                         username = marketingClerk.FirstName;
+                        clerkID = marketingClerk.ClerkID;
                         this.Close();
                     }
                     else
@@ -67,7 +69,6 @@ namespace PoppelOrderingSystem.PresentationLayer
                 }
 
             }
-            this.DialogResult = DialogResult.OK;
         }
 
         private void exitLabel_Click(object sender, EventArgs e)
