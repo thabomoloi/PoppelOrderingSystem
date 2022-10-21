@@ -269,6 +269,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PoppelDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="README.md" />
     <None Include="Resources\poppel_logo %282%29.png" />
   </ItemGroup>
   <ItemGroup>
