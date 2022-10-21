@@ -117,6 +117,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             };
 
             bool validCustomer = ValidateInput(customer);
+            if (validCustomer) validCustomer = ValidateInput(address);
             return validCustomer;
         }
         #endregion

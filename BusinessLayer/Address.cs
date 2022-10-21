@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
@@ -54,16 +56,22 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return addressID; }
             set { addressID = value; }
         }
+        [Required(AllowEmptyStrings =false, ErrorMessage = "Street is required")]
+        [StringLength(50, MinimumLength = 3,ErrorMessage = "Street must be between 3 and 50 characters")]
         public string Street
         {
             get { return street; }
             set { street = value; }
         }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Surbub is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Surbub must be between 3 and 50 characters")]
         public string Suburb
         {
             get { return suburb; }
             set { suburb = value; }
         }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "City is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "City must be between 5 and 50 characters")]
         public string City
         {
             get { return city; }
@@ -74,6 +82,9 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return province; }
             set { province = value; }
         }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Postal code is required")]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "Please enter a valid postal code")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Postal code must only have 4 digits")]
         public string PostalCode
         {
             get { return postalCode; }

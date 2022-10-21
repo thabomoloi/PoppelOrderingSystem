@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,8 @@ namespace PoppelOrderingSystem.BusinessLayer
         private Double total;
         private string customerNumber;
         private string clerkID;
+
+        private Collection<OrderItem> items;
         #endregion
 
         #region Properties
@@ -55,7 +58,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         public Double Total
         {
             get { return total; }
-            set { total = value;  }
+            set { total = value; }
         }
         public string CustomerNumber
         {
@@ -67,6 +70,59 @@ namespace PoppelOrderingSystem.BusinessLayer
             get { return clerkID; }
             set { clerkID = value; }
         }
+        #endregion
+
+        public Order()
+        {
+            items = new Collection<OrderItem>();
+            total = 0;
+        }
+
+        #region Methods
+        public void add(OrderItem item)
+        {
+            if (item.Quantity != 0)
+            {
+                if (FindIndex(item) == -1)
+                    items.Add(item);
+                else
+                    items[FindIndex(item)].Quantity += item.Quantity;
+            }
+        }
+        public void remove(OrderItem item)
+        {
+            items.RemoveAt(FindIndex(item));
+        }
+
+        public double getTotal()
+        {
+            total = 0;
+            foreach (OrderItem item in items)
+            {
+                total += item.getSubTotal();
+            }
+            return total;
+        }
+        public int FindIndex(OrderItem item)
+        {
+            int index = -1;
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].InventoryItemID == item.InventoryItemID)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            return index;
+        }
+        public Collection<OrderItem> Items { get { return items; } set { items = value; } }
+        public OrderItem this[int index] 
+        {
+            get { return items[index]; }
+            set { items[index] = value; }
+        }
+
         #endregion
     }
 }

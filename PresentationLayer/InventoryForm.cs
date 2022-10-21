@@ -67,6 +67,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             }
             dataGridView.DataSource = InventoryDataViews;
             dataGridView.Columns["InventoryItemID"].Visible = false;
+            dataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

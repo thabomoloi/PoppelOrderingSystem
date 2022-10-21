@@ -32,7 +32,7 @@ namespace PoppelOrderingSystem.BusinessLayer
         public double Price
         {
             get { return price; }
-            set {}
+            set { price = value; }
         }
         public int InventoryItemID
         {
@@ -40,5 +40,10 @@ namespace PoppelOrderingSystem.BusinessLayer
             set { inventoryItemID = value; }
         }
         #endregion
+
+        public double getSubTotal()
+        {
+            return price * quantity;
+        }
     }
 }

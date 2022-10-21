@@ -8,12 +8,11 @@ using System.ComponentModel;
 
 namespace PoppelOrderingSystem.BusinessLayer
 {
-    public class Person: EntityValidator
+    public class Person
     {
 
         #region data members
         private string firstName, lastName, phone, email;
-        private string address;
         #endregion
 
         #region Properties
@@ -48,7 +47,7 @@ namespace PoppelOrderingSystem.BusinessLayer
             set { phone = value; }
         }
         [DisplayName("Email")]
-        [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "Ivalid email, please enter a valid email")]
+        [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "Please enter a valid email")]
         public string Email
         {
             get { return email; }
@@ -63,7 +62,6 @@ namespace PoppelOrderingSystem.BusinessLayer
             lastName = "";
             phone = "";
             email = "";
-            address = "";
         }
 
         public Person(string fName, string lName, string pPhone, string pEmail, string pAddress)
@@ -72,7 +70,6 @@ namespace PoppelOrderingSystem.BusinessLayer
             lastName = lName;
             phone = pPhone;
             email = pEmail;
-            address = pAddress;
         }
         #endregion
 

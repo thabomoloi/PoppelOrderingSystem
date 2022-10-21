@@ -35,21 +35,31 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             // customerDataGridView
             // 
-            this.customerDataGridView.AllowUserToOrderColumns = true;
+            this.customerDataGridView.AllowUserToAddRows = false;
+            this.customerDataGridView.AllowUserToDeleteRows = false;
+            this.customerDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Location = new System.Drawing.Point(12, 38);
+            this.customerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerDataGridView.GridColor = System.Drawing.Color.White;
+            this.customerDataGridView.Location = new System.Drawing.Point(30, 32);
+            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.customerDataGridView.Name = "customerDataGridView";
+            this.customerDataGridView.ReadOnly = true;
             this.customerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.customerDataGridView.Size = new System.Drawing.Size(776, 258);
+            this.customerDataGridView.Size = new System.Drawing.Size(740, 497);
             this.customerDataGridView.TabIndex = 0;
             // 
             // CustomerListing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 308);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(800, 561);
             this.Controls.Add(this.customerDataGridView);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerListing";
+            this.Padding = new System.Windows.Forms.Padding(30, 32, 30, 32);
             this.Text = "CustomerListing";
             this.Load += new System.EventHandler(this.CustomerListing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();

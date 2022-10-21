@@ -202,6 +202,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             headerTitle.Text = ((IconButton)sender).Text;
             HideAllSubmenu();
             ActivateButton(sender);
+            OpenChildForm(new ReportsForm());
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -232,7 +233,7 @@ namespace PoppelOrderingSystem.PresentationLayer
         {
             using (LoginForm loginForm = new LoginForm())
             {
-                /*is.Hide();
+                this.Hide();
                 var dialogResult = loginForm.ShowDialog();
                 if (dialogResult == DialogResult.Cancel)
                     this.Close();
@@ -241,9 +242,7 @@ namespace PoppelOrderingSystem.PresentationLayer
                 {
                     username.Text = LoginForm.username;
                     this.Show();
-                }*/
-                LoginForm.username = "Vincent";
-                LoginForm.clerkID = "ST127832";
+                }
             }
         }
     }

@@ -281,6 +281,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(10, 34);
@@ -470,14 +471,18 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(70)))));
             this.submitButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.submitButton.FlatAppearance.BorderSize = 0;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.ForeColor = System.Drawing.Color.White;
             this.submitButton.Location = new System.Drawing.Point(300, 0);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(120, 44);
             this.submitButton.TabIndex = 3;
             this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // panel13
@@ -490,14 +495,18 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             // clearButton
             // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(70)))));
             this.clearButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
             this.clearButton.Location = new System.Drawing.Point(110, 0);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(120, 44);
             this.clearButton.TabIndex = 0;
             this.clearButton.Text = "Clear";
-            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // panel12
@@ -512,6 +521,7 @@ namespace PoppelOrderingSystem.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(745, 526);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

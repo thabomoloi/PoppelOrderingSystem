@@ -81,7 +81,6 @@
     <Compile Include="BusinessLayer\CustomerController.cs" />
     <Compile Include="BusinessLayer\DeliveryAddress.cs" />
     <Compile Include="BusinessLayer\DeliveryAddressHandler.cs" />
-    <Compile Include="BusinessLayer\EntityValidator.cs" />
     <Compile Include="BusinessLayer\InventoryItem.cs" />
     <Compile Include="BusinessLayer\InventoryItemHandler.cs" />
     <Compile Include="BusinessLayer\MarketingClerk.cs" />
@@ -168,11 +167,23 @@
     <Compile Include="PresentationLayer\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\OrderItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\OrderItemForm.Designer.cs">
+      <DependentUpon>OrderItemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\OrderListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\OrderListForm.Designer.cs">
       <DependentUpon>OrderListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,8 +214,14 @@
     <EmbeddedResource Include="PresentationLayer\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\OrderItemForm.resx">
+      <DependentUpon>OrderItemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\OrderListForm.resx">
       <DependentUpon>OrderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

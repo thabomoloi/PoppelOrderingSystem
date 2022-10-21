@@ -46,8 +46,8 @@ namespace PoppelOrderingSystem.PresentationLayer
                 OrderDataView view = new OrderDataView
                 {
                     OrderNumber = order.OrderNumber.ToString(),
-                    OrderDate = order.OrderDate.ToString(),
-                    DeliveryDate = order.DeliveryDate.ToString(),
+                    OrderDate = order.OrderDate.ToString("yyyy/MM/dd"),
+                    DeliveryDate = (DateTime.MaxValue.Subtract(order.DeliveryDate).Days < 2) ? "" : order.DeliveryDate.ToString("yyyy/MM/dd"),
                     Status = order.Status.ToString(),
                     Total = order.Total.ToString(),
                     CustomerNumber = order.CustomerNumber,
@@ -57,6 +57,13 @@ namespace PoppelOrderingSystem.PresentationLayer
             }
             dataGridView.DataSource = OrderDataViews;
             dataGridView.Columns["Total"].Visible = false;
+            dataGridView.Columns["OrderNumber"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; 
+            dataGridView.Columns["OrderDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; 
+            dataGridView.Columns["DeliveryDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; 
+            dataGridView.Columns["Status"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView.Columns["Total"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView.Columns["CustomerNumber"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView.Columns["ClerkID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; 
         }
     }
 }

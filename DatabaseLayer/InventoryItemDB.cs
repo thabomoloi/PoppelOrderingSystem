@@ -269,7 +269,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         {
             //Create the command that must be used to insert values into table
             //Assumption is that the product number
-            daMain.UpdateCommand = new SqlCommand("UPDATE InventoryItems SET QuantityOnHand =@QuantityOnHand, QuantityInStock =@QuantityInStock, ProductID =@ProductID" + "WHERE InventoryItemID = @Original_ID", cnMain);
+            daMain.UpdateCommand = new SqlCommand("UPDATE InventoryItems SET QuantityOnHand =@QuantityOnHand, QuantityInStock =@QuantityInStock, ProductID =@ProductID " + "WHERE InventoryItemID = @Original_ID", cnMain);
             Build_UPDATE_Parameters();
         }
         #endregion

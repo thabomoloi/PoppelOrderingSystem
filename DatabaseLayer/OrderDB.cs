@@ -244,9 +244,6 @@ namespace PoppelOrderingSystem.DatabaseLayer
             // Create Parameters to communicate with SQL INSERT add the input parameter and set its properties.             
             SqlParameter param = default(SqlParameter);
 
-            param = new SqlParameter("@OrderNumber", SqlDbType.Int, 4, "OrderNumber");
-            daMain.InsertCommand.Parameters.Add(param); //Add the parameter to the Parameters collection.
-
             param = new SqlParameter("@OrderDate", SqlDbType.Date, 3, "OrderDate");
             daMain.InsertCommand.Parameters.Add(param);
 
@@ -348,7 +345,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         {
             //Create the command that must be used to insert values into table
             //Assumption is that the customer number
-            daMain.UpdateCommand = new SqlCommand("UPDATE Orders SET OrderDate =@OrderDate, DeliveryDate =@LastNme, CustomerNumber =@CustomerNumber, Total =@Total, ClerkID =@ClerkID, Status =@Status " + "WHERE OrderNumber = @Original_ID", cnMain);
+            daMain.UpdateCommand = new SqlCommand("UPDATE Orders SET OrderDate =@OrderDate, DeliveryDate =@DeliveryDate, CustomerNumber =@CustomerNumber, Total =@Total, ClerkID =@ClerkID, Status =@Status " + "WHERE OrderNumber = @Original_ID", cnMain);
             Build_UPDATE_Parameters();
         }
         #endregion

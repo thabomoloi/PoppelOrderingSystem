@@ -295,7 +295,7 @@ namespace PoppelOrderingSystem.DatabaseLayer
         {
             //Create the command that must be used to insert values into table
             //Assumption is that the account number
-            daMain.UpdateCommand = new SqlCommand("UPDATE Accounts SET DateOpened =@DateOpened, DateClosed =@LastNme, AvailableCredit =@Phne, Balance =@Balance, CustomerNumber =@CustomerNumber, Status =@Status " + "WHERE AccountNumber = @Original_ID", cnMain);
+            daMain.UpdateCommand = new SqlCommand("UPDATE Accounts SET DateOpened =@DateOpened, DateClosed =@DateClosed, AvailableCredit =@AvailableCredit, Balance =@Balance, CustomerNumber =@CustomerNumber, Status =@Status " + "WHERE AccountNumber = @Original_ID", cnMain);
             Build_UPDATE_Parameters();
         }
         #endregion
